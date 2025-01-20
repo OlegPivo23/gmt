@@ -1,0 +1,20 @@
+.header__topNav {
+  border-bottom: 1px solid #fff;
+  box-shadow: 0 0 4px 0 rgba(255, 255, 255, 0.25);
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-left: 140px;
+}
+.header__listItem {
+  font-weight: 700;
+  font-size: 15px;
+  padding: 29px 0;
+  color: #fff;
+}
+
+body {
+  background-color: #fff5e9;
+}
