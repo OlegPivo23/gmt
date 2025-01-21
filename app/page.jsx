@@ -4,6 +4,10 @@ import "./main.scss";
 import MainLayout from "@/components/layouts/MainLayout";
 import NewsComponent from "@/components/news/NewsComponent";
 import SpecialtiesComponent from "@/components/specialties/SpecialtiesComponent";
+import { AdditionallyComponent } from "@/components/additionally/AdditionallyComponent";
+import MovieAboutComponent from "@/components/movieAbout/MovieAboutComponent";
+import ContactsComponent from "@/components/contacts/ContactsComponent";
+import LinksComponent from "@/components/links/LinksComponent";
 
 export default function MainPage() {
   return (
@@ -15,6 +19,12 @@ export default function MainPage() {
           </section>
           <section>
             <SpecialtiesComponent />
+          </section>
+          <section>
+            <AdditionallyComponent />
+          </section>
+          <section>
+            <MovieAboutComponent />
           </section>
         </div>
       </MainLayout>

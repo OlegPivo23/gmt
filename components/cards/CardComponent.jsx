@@ -3,7 +3,6 @@ export default function CardComponent({
   description,
   bgImage,
   buttonText,
-  children,
   maxWidth = "100%",
   maxHeight = "auto",
   width = "100%",
@@ -36,7 +35,16 @@ export default function CardComponent({
         )}
       </div>
 
-      {children && <div className="mt-4">{children}</div>}
+      <div>
+        {buttonText && (
+          <div className="flex gap-2 items-center absolute bottom-[30px] right-[73px]">
+            <button className="font-extrabold text-sm text-center text-white">
+              {buttonText}
+            </button>
+            <img src="/icons/card/card-arrow.svg" alt="Стрелка" />
+          </div>
+        )}
+      </div>
     </div>
   );
 }
