@@ -24,7 +24,7 @@ export default function ContactsComponent() {
   return (
     <div className="flex flex-col gap-[55px]">
       <TitleComponent>Контакты</TitleComponent>
-      <div className="grid grid-cols-3 justify-between items-end">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-between items-end">
         {contacts.map((contact, index) => (
           <div key={index} className="flex flex-col gap-[20px]">
             {contact.title && (

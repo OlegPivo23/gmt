@@ -7,10 +7,11 @@ export default function CardComponent({
   maxHeight = "auto",
   width = "100%",
   height = "auto",
+  borderRadius = "25px", 
 }) {
   return (
     <div
-      className="rounded-[25px] box-border object-cover aspect-[1/1] cursor-pointer relative"
+      className="box-border object-cover aspect-[1/1] cursor-pointer relative"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
@@ -19,6 +20,7 @@ export default function CardComponent({
         maxHeight: maxHeight,
         width: width,
         height: height,
+        borderRadius: borderRadius, // Использование нового пропса
       }}
     >
       <div className="absolute bottom-8 left-0 p-4">

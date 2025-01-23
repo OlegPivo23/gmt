@@ -1,0 +1,20 @@
+.pagination__wrapper {
+}
+.pagination__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.pagination__list-item {
+  border-radius: 6px;
+  padding: 0px 8px;
+  background: #ffe1c2;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 19px;
+  color: #fff;
+  &--active {
+    background: #ffad5b;
+  }
+}

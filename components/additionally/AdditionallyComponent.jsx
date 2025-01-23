@@ -1,6 +1,7 @@
-import Image from "next/image";
 import CardComponent from "../cards/CardComponent";
+import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import TitleComponent from "../UI/title/TitleComponent";
+
 
 const cards = [
   "/img/news/card-bg.png",
@@ -19,23 +20,8 @@ export function AdditionallyComponent() {
               <CardComponent maxWidth="380px" bgImage={item} />
             </div>
           ))}
-          <div className="absolute top-1/2 -translate-y-1/2 left-[25px] cursor-pointer">
-            <Image
-              src="/icons/card/card-arrow-black.svg"
-              alt="Левая стрелка"
-              width={12}
-              height={24}
-            />
-          </div>
-          <div className="absolute top-1/2 -translate-y-1/2 right-[25px] cursor-pointer">
-            <Image
-              src="/icons/card/card-arrow-black.svg"
-              alt="Правая стрелка"
-              width={12}
-              height={24}
-              className="rotate-180"
-            />
-          </div>
+          <NavigationArrowComponent direction="left" />
+          <NavigationArrowComponent direction="right" />
         </div>
       </div>
     </div>
