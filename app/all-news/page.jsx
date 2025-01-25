@@ -6,7 +6,7 @@ export default function AllNewsPage() {
   return (
     <div className="page">
       <MainLayout>
-        <section className="flex flex-col gap-[90px]">
+        <section className="flex flex-col gap-[40px] md:gap-[90px]">
           <AllNewsComponent />
           <PaginationComponent />
         </section>

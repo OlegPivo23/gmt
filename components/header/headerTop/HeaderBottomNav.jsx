@@ -3,8 +3,8 @@ import Image from "next/image";
 
 export default function HeaderBottomNav({ links }) {
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-8 items-center lg:items-center px-4 sm:px-6 lg:px-8 py-4">
-      <div className="flex items-center gap-6 lg:gap-8">
+    <div className="flex flex-col lg:flex-row lg:gap-8 items-center lg:items-center px-4 sm:px-6 lg:px-8 py-4 ">
+      <div className="flex items-center gap-6 lg:gap-8 ml-[87px]">
         <Image
           src="/img/header/logo.png"
           alt="Логотип"
