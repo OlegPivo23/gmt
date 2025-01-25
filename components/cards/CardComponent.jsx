@@ -7,7 +7,7 @@ export default function CardComponent({
   maxHeight = "auto",
   width = "100%",
   height = "auto",
-  borderRadius = "25px", 
+  borderRadius = "25px",
 }) {
   return (
     <div
@@ -20,33 +20,37 @@ export default function CardComponent({
         maxHeight: maxHeight,
         width: width,
         height: height,
-        borderRadius: borderRadius, // Использование нового пропса
+        borderRadius: borderRadius,
       }}
     >
-      <div className="absolute bottom-8 left-0 p-4">
+      {/* Контент карточки */}
+      <div className="absolute bottom-4 md:bottom-8 left-0 p-4">
         {title && (
-          <h2 className="font-extrabold text-[32px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+          <h2 className="font-extrabold text-[20px] md:text-[32px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
             {title}
           </h2>
         )}
 
         {description && (
-          <p className="font-semibold text-[20px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+          <p className="font-semibold text-[14px] md:text-[20px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
             {description}
           </p>
         )}
       </div>
 
-      <div>
-        {buttonText && (
-          <div className="flex gap-2 items-center absolute bottom-[30px] right-[73px]">
-            <button className="font-extrabold text-sm text-center text-white">
-              {buttonText}
-            </button>
-            <img src="/icons/card/card-arrow.svg" alt="Стрелка" />
-          </div>
-        )}
-      </div>
+      {/* Кнопка (если есть) */}
+      {buttonText && (
+        <div className="flex gap-2 items-center absolute bottom-[15px] md:bottom-[30px] right-[20px] md:right-[73px]">
+          <button className="font-extrabold text-xs md:text-sm text-center text-white">
+            {buttonText}
+          </button>
+          <img
+            src="/icons/card/card-arrow.svg"
+            alt="Стрелка"
+            className="w-4 h-4 md:w-6 md:h-6"
+          />
+        </div>
+      )}
     </div>
   );
 }

@@ -11,7 +11,6 @@ export default function MainPage() {
     <div className="page">
       <MainLayout>
         <div className="flex flex-col gap-[90px] px-4 md:px-[30px] lg:px-[90px]">
-          <SwiperComponent />
           <section>
             <NewsComponent />
           </section>

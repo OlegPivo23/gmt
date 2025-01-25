@@ -1,31 +1,41 @@
 import Link from "next/link";
-
-import "../../../app/main.scss";
+import Image from "next/image";
 
 export default function HeaderBottomNav({ links }) {
   return (
-    <div className="flex flex-col lg:flex-row lg:gap-[34px]  items-center lg:items-center ">
-      <div className="pl-[87px] pt-[23px] flex items-center gap-[50px]">
-        <img
+    <div className="flex flex-col lg:flex-row lg:gap-8 items-center lg:items-center px-4 sm:px-6 lg:px-8 py-4">
+      <div className="flex items-center gap-6 lg:gap-8">
+        <Image
           src="/img/header/logo.png"
-          alt="logo"
-          className="p-[4px_1px] w-[60px] shadow-[0_0_4px_0_rgba(0,0,0,0.3)] bg-white rounded-[30px]"
+          alt="Логотип"
+          width={60}
+          height={60}
+          className="p-1 w-[60px] shadow-md bg-white rounded-full"
         />
-        <img
-          src="/icons/header/burger.svg"
-          alt="burger button"
-          className="cursor-pointer"
-        />
+        <button className="lg:hidden p-2">
+          <Image
+            src="/icons/header/burger.svg"
+            alt="Меню"
+            width={24}
+            height={24}
+            className="cursor-pointer"
+          />
+        </button>
       </div>
-      <div>
-        <ul className="flex gap-[50px] items-center">
+      <nav className="hidden lg:block">
+        <ul className="flex gap-6 lg:gap-8 items-center">
           {links?.map((item, i) => (
-            <li key={i} className="font-extrabold text-[15px] text-white">
-              <Link href={item.link}>{item.name}</Link>
+            <li key={i}>
+              <Link
+                href={item.link}
+                className="font-extrabold text-sm lg:text-base text-white hover:text-orange-200 transition-colors"
+              >
+                {item.name}
+              </Link>
             </li>
           ))}
         </ul>
-      </div>
+      </nav>
     </div>
   );
 }

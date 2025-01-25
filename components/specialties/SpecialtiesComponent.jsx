@@ -1,5 +1,5 @@
 "use client";
-import { useRouter } from "next/navigation"; 
+import { useRouter } from "next/navigation";
 import CardComponent from "../cards/CardComponent";
 import ShowButton from "../UI/button/ShowButtonComponent";
 import TitleComponent from "../UI/title/TitleComponent";
@@ -41,6 +41,7 @@ const specialities = [
 
 export default function SpecialtiesComponent() {
   const router = useRouter();
+
   const handleCardClick = (speciality) => {
     router.push(
       `/specialties/${speciality.id}?title=${encodeURIComponent(
@@ -51,11 +52,16 @@ export default function SpecialtiesComponent() {
     );
   };
 
+  const handleShowAllClick = () => {
+    router.push("/all-specialties");
+  };
+
   return (
     <div className="flex flex-col gap-[25px]">
       <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center">
         <TitleComponent>Наши специальности</TitleComponent>
-        <ShowButton>Показать все</ShowButton>
+        {/* Передаем колбек в кнопку */}
+        <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
       <div className="flex flex-col gap-[35px]">
         {specialities.map((item) => (

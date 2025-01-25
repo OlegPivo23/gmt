@@ -1,16 +1,22 @@
 import Link from "next/link";
-import style from "./headerTop.module.scss";
 
 export default function HeaderTopNav({ links }) {
   return (
-    <div className={style.header__topNav}>
-      <ul className={style.header__list}>
-        {links?.map((item, i) => (
-          <li key={i} className={style.header__listItem}>
-            <Link href={item.link}>{item.name}</Link>
-          </li>
-        ))}
-      </ul>
+    <div className="border-b border-white/25 shadow-sm">
+      <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <ul className="flex flex-wrap gap-4 sm:gap-6 lg:gap-8 py-4">
+          {links?.map((item, i) => (
+            <li key={i}>
+              <Link
+                href={item.link}
+                className="font-bold text-sm text-white hover:text-orange-200 transition-colors"
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }

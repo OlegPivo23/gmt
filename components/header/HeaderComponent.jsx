@@ -1,33 +1,32 @@
 import HeaderBottomNav from "./headerTop/HeaderBottomNav";
 import HeaderTopNav from "./headerTop/HeaderTopNav";
-
-import style from "./header.module.scss";
+import style from "./header.module.scss"; 
 
 const headerLinks = [
   { name: "Абитуриентам", link: "/applicants" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
-  { name: "Методическая работа", link: "/methodical " },
+  { name: "Методическая работа", link: "/methodical" },
 ];
 
 export default function Header() {
   return (
-    <div className={style.header}>
+    <header className={style.header}>
       <div>
         <HeaderTopNav links={headerLinks} />
         <HeaderBottomNav links={headerLinks} />
       </div>
-      <div className="flex flex-col pl-[89px] lg:max-w-[758px] mb-[90px]">
-        <h2 className="font-extrabold text-[36px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+      <div className="px-6 sm:px-8 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px]">
+        <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white text-shadow">
           Создаем будущее своими руками
         </h2>
-        <p className="font-semibold text-[20px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)] ">
+        <p className="font-semibold text-base sm:text-lg lg:text-xl text-white text-shadow mt-4">
           Директор ГМТ Давид Бирагов принял участие в форуме среднего
           профессионального образования, организатором которого выступает
           Министерство просвещения России при поддержке Правительства Калужской
           области.
         </p>
       </div>
-    </div>
+    </header>
   );
 }
