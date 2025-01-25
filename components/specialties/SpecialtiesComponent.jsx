@@ -53,7 +53,7 @@ export default function SpecialtiesComponent() {
 
   return (
     <div className="flex flex-col gap-[25px]">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center">
         <TitleComponent>Наши специальности</TitleComponent>
         <ShowButton>Показать все</ShowButton>
       </div>

@@ -23,11 +23,11 @@ const cards = [
 export default function NewsComponent() {
   return (
     <div className="flex flex-col gap-[25px]">
-      <div className="flex justify-between items-center">
+      <div className="flex flex-col items-start md:flex-row md:justify-between md:items-center">
         <TitleComponent>Новости</TitleComponent>
         <ShowButton>Показать все</ShowButton>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[21px]">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[21px] ">
         {cards.map((card, index) => (
           <CardComponent
             key={index}

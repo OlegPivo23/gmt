@@ -8,7 +8,7 @@ export default function NewsInfoComponent() {
         <span className="p-4 font-medium text-[15px] text-black">01.01.01</span>
       </div>
 
-      <div className="flex items-center justify-between gap-[60px] relative">
+      <div className="flex flex-col lg:flex-row items-center justify-between gap-[60px] relative">
         <div className="flex-1 relative">
           <div className="relative">
             <img
@@ -16,7 +16,6 @@ export default function NewsInfoComponent() {
               alt=""
               className="w-full rounded-[54px] shadow-[0_4px_21px_0_rgba(255,173,91,0.62)] bg-[linear-gradient(180deg,rgba(52,52,52,0.45)_0%,rgba(255,173,91,0.45)_100%)]"
             />
-            {/* Navigation Arrow positioned outside the image */}
             <NavigationArrowComponent
               direction="left"
               className="absolute -left-8 top-1/2 transform -translate-y-1/2"

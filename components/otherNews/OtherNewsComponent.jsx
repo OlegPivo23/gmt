@@ -26,7 +26,7 @@ export default function OtherNewsComponent() {
       <div className="flex justify-center">
         <TitleComponent>Остальные новости</TitleComponent>
       </div>
-      <div className="px-[81px] py-[43px] grid grid-cols-3 gap-[50px] relative">
+      <div className="px-[81px] py-[43px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[50px] relative">
         {cards.map((item, i) => (
           <div key={i}>
             <CardComponent

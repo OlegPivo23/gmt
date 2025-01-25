@@ -6,11 +6,11 @@ export default function LinksComponent() {
   return (
     <div className="flex flex-col gap-[45px]">
       <TitleComponent>Ссылки</TitleComponent>
-      <div className="flex flex-wrap justify-between gap-10 ">
+      <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 lg:grid-cols-3  gap-4">
         {links.map((item, i) => (
           <div
             key={i}
-            className="rounded-[57px] w-[335px] h-[638px] bg-[#d2d2d2] cursor-pointer flex-shrink-0"
+            className="rounded-[57px] max-w-[335px] w-full h-[638px] bg-[#d2d2d2] cursor-pointer flex-shrink-0"
           ></div>
         ))}
       </div>
