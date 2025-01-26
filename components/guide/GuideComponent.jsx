@@ -1,4 +1,4 @@
-import Image from "next/image"; // Импортируем компонент Image
+import Image from "next/image"; 
 import TitleComponent from "../UI/title/TitleComponent";
 
 const directorData = {

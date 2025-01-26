@@ -34,11 +34,13 @@ export default function HeaderSecondary() {
     <div className="bg-[#fff5e9]">
       <div className={style.headerTopSecondary}>
         <div>
-          <img
-            src="/img/header/logo.png"
-            alt="logo"
-            className="p-[4px_1px] w-[60px] shadow-[0_0_4px_0_rgba(0,0,0,0.3)] bg-white rounded-[30px]"
-          />
+          <Link href={"/"}>
+            <img
+              src="/img/header/logo.png"
+              alt="logo"
+              className="p-[4px_1px] w-[60px] shadow-[0_0_4px_0_rgba(0,0,0,0.3)] bg-white rounded-[30px]"
+            />
+          </Link>
         </div>
 
         <nav className="hidden md:block">
