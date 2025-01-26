@@ -6,6 +6,7 @@ import { useState } from "react";
 
 const headerLinks = [
   { name: "Абитуриентам", link: "/applicants" },
+  { name: "Руководство техникума", link: "/guide" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
   { name: "Методическая работа", link: "/methodical" },
@@ -16,6 +17,7 @@ const pageDescriptions = {
   "/about": "О техникуме - информация о нашем учебном заведении",
   "/students": "Студентам - полезная информация для студентов",
   "/methodical": "Методическая работа - материалы для преподавателей",
+  "/guide": "Педагогический состав",
 };
 
 export default function HeaderSecondary() {
