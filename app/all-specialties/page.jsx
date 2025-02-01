@@ -51,7 +51,6 @@ export default function AllSpecialtiesPage() {
                 description={card.description}
                 bgImage={card.bgImg}
                 maxHeight="254px"
-                borderRadius="40px"
               />
             ))}
           </div>

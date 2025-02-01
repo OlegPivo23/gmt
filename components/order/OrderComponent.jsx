@@ -10,7 +10,7 @@ export function OrderComponent() {
         <TitleComponent>Приказ о зачислении</TitleComponent>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:justify-center gap-4 ">
           {cards.map((item, i) => (
-            <CardComponent key={i} bgImage="/img/order/order-img.png" className="rounded-[27px]"/>
+            <CardComponent key={i} bgImage="/img/order/order-img.png" />
           ))}
         </div>
       </div>
@@ -23,7 +23,6 @@ export function OrderComponent() {
             <CardComponent
               key={i}
               bgImage="/img/order/order-img.png"
-              className="rounded-[27px]"
             />
           ))}
         </div>

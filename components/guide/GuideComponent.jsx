@@ -59,7 +59,7 @@ export default function GuideComponent() {
             alt="Директор"
             width={450}
             height={600}
-            className="object-cover rounded-lg"
+            className="object-cover "
             priority
           />
         </div>

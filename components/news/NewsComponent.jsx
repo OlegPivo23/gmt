@@ -27,15 +27,13 @@ const cards = [
 ];
 
 export default function NewsComponent() {
-  const router = useRouter(); // Инициализируем useRouter
-  const navigateTo = useNavigation(); // Используем кастомный хук
+  const router = useRouter();
+  const navigateTo = useNavigation();
 
-  // Обработчик клика на кнопку "Показать все"
   const handleShowAllClick = () => {
-    router.push("/all-news"); // Переход на страницу /all-news
+    router.push("/all-news");
   };
 
-  // Обработчик клика по карточке
   const handleCardClick = (card) => {
     navigateTo(`/news/${card.id}`, {
       title: card.title,
@@ -54,8 +52,8 @@ export default function NewsComponent() {
         {cards.map((card, index) => (
           <div
             key={index}
-            onClick={() => handleCardClick(card)} // Добавляем обработчик клика
-            className="cursor-pointer" // Делаем карточку кликабельной
+            onClick={() => handleCardClick(card)}
+            className="cursor-pointer"
           >
             <CardComponent
               title={card.title}

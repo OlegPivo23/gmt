@@ -7,7 +7,8 @@ export default function CardComponent({
   maxHeight = "auto",
   width = "100%",
   height = "auto",
-  borderRadius = "25px",
+  borderRadius = "0",
+  footerText,
 }) {
   return (
     <div
@@ -49,6 +50,13 @@ export default function CardComponent({
             alt="Стрелка"
             className="w-4 h-4 md:w-6 md:h-6"
           />
+        </div>
+      )}
+      {footerText && (
+        <div className="absolute bottom-0 left-0 w-full bg-white p-4 bg-white shadow-[0_-4px_13px_-5px_rgba(0,0,0,0.25)] ">
+          <h2 className="font-bold text-[20px] underline decoration-transparent">
+            {footerText}
+          </h2>
         </div>
       )}
     </div>

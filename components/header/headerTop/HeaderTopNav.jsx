@@ -28,7 +28,7 @@ export default function HeaderTopNav({ links }) {
         </ul>
 
         {isMenuOpen && (
-          <div className=" bg-white text-black rounded-md shadow-lg p-4 absolute top-0 left-0 right-0 z-50 rounded-[50px]">
+          <div className=" bg-white text-black  shadow-lg p-4 absolute top-0 left-0 right-0 z-50 ">
             <ul className="flex flex-col gap-4">
               {links?.map((item, i) => (
                 <li key={i} className="list-none">

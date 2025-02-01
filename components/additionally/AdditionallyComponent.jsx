@@ -35,7 +35,7 @@ export function AdditionallyComponent() {
   return (
     <div className="flex flex-col gap-[25px]">
       <TitleComponent>Дополнительно</TitleComponent>
-      <div className="border border-[rgba(0,0,0,0.25)] rounded-[30px]">
+      <div className="border border-[rgba(0,0,0,0.25)] ">
         <div className="px-[81px] py-[43px] relative">
           <Swiper
             ref={swiperRef}

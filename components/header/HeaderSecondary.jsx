@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import { usePathname } from "next/navigation"; // Импортируем usePathname
+import { usePathname } from "next/navigation";
 import style from "./header.module.scss";
 import { useState } from "react";
 
@@ -10,6 +10,13 @@ const headerLinks = [
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
   { name: "Методическая работа", link: "/methodical" },
+  { name: "Галерея", link: "/galary" },
+  { name: "Документы", link: "/documents" },
+  { name: "Материально-техническое обеспечение", link: "/logistical-support" },
+  {
+    name: "Финансово-хозяйственная деятельность",
+    link: "/financial-economic-activities",
+  },
 ];
 
 const pageDescriptions = {
@@ -18,6 +25,10 @@ const pageDescriptions = {
   "/students": "Студентам - полезная информация для студентов",
   "/methodical": "Методическая работа - материалы для преподавателей",
   "/guide": "Педагогический состав",
+  "/galary": "О техникуме",
+  "/documents": "Студентам",
+  "/logistical-support": "О техникуме",
+  "/financial-economic-activities": "О техникуме",
 };
 
 export default function HeaderSecondary() {
@@ -38,14 +49,14 @@ export default function HeaderSecondary() {
             <img
               src="/img/header/logo.png"
               alt="logo"
-              className="p-[4px_1px] w-[60px] shadow-[0_0_4px_0_rgba(0,0,0,0.3)] bg-white rounded-[30px]"
+              className="p-[4px_1px] w-[60px] shadow-[0_0_4px_0_rgba(0,0,0,0.3)] bg-white "
             />
           </Link>
         </div>
 
         <nav className="hidden md:block">
           <ul className="flex gap-[50px]">
-            {headerLinks?.map((item, i) => (
+            {headerLinks?.slice(0, 5).map((item, i) => (
               <li key={i} className="font-extrabold text-[15px] text-black">
                 <Link href={item.link}>{item.name}</Link>
               </li>

@@ -30,7 +30,7 @@ export default function NewsInfoComponent() {
       {newsData.map((news, index) => (
         <div
           key={index}
-          className="border-2 border-opacity-25 border-black rounded-[50px] bg-white px-4 md:px-[41px] py-6 md:py-[51px] mx-4 relative mb-6"
+          className="border-2 border-opacity-25 border-black  bg-white px-4 md:px-[41px] py-6 md:py-[51px] mx-4 relative mb-6"
         >
           {/* Дата */}
           <div className="absolute top-4 md:top-[50px] right-4 md:right-[50px] flex items-center">
@@ -61,14 +61,14 @@ export default function NewsInfoComponent() {
                   type: "bullets", // Тип пагинации (точки)
                 }}
                 loop={true} // Зацикливание слайдов
-                className="rounded-[30px] md:rounded-[54px] shadow-[0_4px_21px_0_rgba(255,173,91,0.62)]"
+                className=" shadow-[0_4px_21px_0_rgba(255,173,91,0.62)]"
               >
                 {news.images.map((image, i) => (
                   <SwiperSlide key={i}>
                     <img
                       src={image}
                       alt={`Фоновое изображение ${i + 1}`}
-                      className="w-full h-full object-cover rounded-[30px] md:rounded-[54px]"
+                      className="w-full h-full object-cover "
                     />
                   </SwiperSlide>
                 ))}
