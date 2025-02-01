@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import HeaderTopNav from "./headerTop/HeaderTopNav";
@@ -51,16 +51,21 @@ const headerBottomLinks = [
 export default function Header() {
   const swiperRef = useRef(null);
   const [currentImage, setCurrentImage] = useState(slides[0].imageUrl);
+  const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = currentImage;
+    img.onload = () => setBgLoaded(true);
+  }, [currentImage]);
 
   return (
     <header
       className={style.header}
       style={{
-        backgroundImage: `linear-gradient(
-          0deg,
-          rgba(255, 173, 91, 0.37) 0%,
-          rgba(255, 255, 255, 0.57) 99.76%
-        ), url(${currentImage})`,
+        backgroundImage: bgLoaded
+          ? `linear-gradient(0deg, rgba(255, 173, 91, 0.37) 0%, rgba(255, 255, 255, 0.57) 99.76%), url(${currentImage})`
+          : "none",
       }}
     >
       <div>
