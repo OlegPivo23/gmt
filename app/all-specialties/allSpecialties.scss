@@ -4,7 +4,12 @@
     "card1 card1"
     "card2 card3"
     "card4 card4"
-    "card5 card6";
+    "card5 card6"
+    "card7 card7"
+    "card8 card9"
+    "card10 card10"
+    "card11 card12"
+    "card13 card13";
   grid-template-columns: 1fr 1fr;
   gap: 16px;
 }
@@ -31,4 +36,25 @@
 
 .specialties-grid > *:nth-child(6) {
   grid-area: card6;
+}
+.specialties-grid > *:nth-child(7) {
+  grid-area: card7;
+}
+.specialties-grid > *:nth-child(8) {
+  grid-area: card8;
+}
+.specialties-grid > *:nth-child(9) {
+  grid-area: card9;
+}
+.specialties-grid > *:nth-child(10) {
+  grid-area: card10;
+}
+.specialties-grid > *:nth-child(11) {
+  grid-area: card11;
+}
+.specialties-grid > *:nth-child(12) {
+  grid-area: card12;
+}
+.specialties-grid > *:nth-child(13) {
+  grid-area: card13;
 }

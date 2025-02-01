@@ -42,13 +42,13 @@ export default function DocumentsPage() {
   return (
     <div className="page">
       <MainLayout>
-        <div className="flex flex-col gap-[70px] px-[20px] px-[77px]">
+        <div className="flex flex-col gap-[70px] px-[20px] px-[20] lg:px-[77px]">
           <div>
             <ul>
               <li>
                 <a
                   href=""
-                  className="font-bold text-[48px] underline decoration-black decoration-0 text-black"
+                  className="font-bold text-[20px] lg:text-[48px] underline decoration-black decoration-0 text-black"
                 >
                   Федеральный закон от 29.12.2012 N 273-ФЗ (ред. от 02.07.2021
                   года) «Об образовании в Российской Федерации»
@@ -62,8 +62,6 @@ export default function DocumentsPage() {
               {docs1.map((doc, i) => (
                 <CardComponent
                   key={i}
-                  maxWidth="458px"
-                  maxHeight="322px"
                   width="100%"
                   height="100%"
                   bgImage={doc.bgImage}

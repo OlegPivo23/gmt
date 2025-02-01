@@ -17,9 +17,9 @@ export default function MainPage() {
           <section>
             <SpecialtiesComponent />
           </section>
-          <section>
+          {/* <section>
             <AdditionallyComponent />
-          </section>
+          </section> */}
           <section>
             <MovieAboutComponent />
           </section>

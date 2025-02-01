@@ -16,12 +16,12 @@ const cards = [
     bgImg: "/img/news/card-bg.png",
   },
   {
-    title: "Земельно-имущественные отношения",
+    title: "Повар",
     description: "Описание новости 3",
     bgImg: "/img/news/card-bg.png",
   },
   {
-    title: "Экономика и бухгалтерский учет (по отраслям)",
+    title: "Мехатроника и робототехника (по отраслям)",
     description: "Описание новости 4",
     bgImg: "/img/news/card-bg.png",
   },
@@ -32,6 +32,41 @@ const cards = [
   },
   {
     title: "Мастер столярного и мебельного производства",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Информационные системы и программирование",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Юриспруденция",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Мастер контрольно измерительных приборов и автоматики",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Монтаж, тех. обслуживание и ремонт промышленного оборудования",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Мастер по ремонту инж. систем ЖКХ",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Эксплуатация и обслуживание эл. и элмех. оборудования (по отраслям)",
+    description: "Описание новости 6",
+    bgImg: "/img/news/card-bg.png",
+  },
+  {
+    title: "Тех. обслуживание и ремонт двигателей, систем автомобилей",
     description: "Описание новости 6",
     bgImg: "/img/news/card-bg.png",
   },

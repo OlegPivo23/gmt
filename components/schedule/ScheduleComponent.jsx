@@ -5,7 +5,7 @@ const ScheduleGrid = ({ title, cards }) => {
   return (
     <div className="flex flex-col gap-[25px] px-[43px]">
       <TitleComponent>{title}</TitleComponent>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[52px] justify-center items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[52px] justify-center items-start">
         {cards.map((card, index) => (
           <div key={index} className="flex flex-col items-center">
             <CardComponent bgImage={card.bgImage} maxHeight="190px" />
@@ -26,43 +26,93 @@ export default function ScheduleComponent() {
   const cards = [
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Первый курс ",
+      text2: "Первый семестр",
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Второй курс",
+      text2: "Первый семестр",
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Третий курс",
+      text2: "Первый семестр",
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Четвертый курс",
+      text2: "Первый семестр",
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Уч. корпус пр. Коста, 195",
+      text2: "Первый семестр",
+
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Уч. корпус Ватутина 118",
+      text2: "Первый семестр",
+
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Заочное отделение",
+      text2: "Первый семестр",
+
     },
     {
       bgImage: "/img/schedule/schedule.png",
-      text1: "Текст 1",
-      text2: "Текст 2",
+      text1: "Заочное отделение",
+      text2: "Первый семестр",
+
+    },
+  ];
+  const cards2 = [
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Первый курс ",
+      text2: "Первый семестр",
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Второй курс",
+      text2: "Первый семестр",
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Третий курс",
+      text2: "Первый семестр",
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Четвертый курс",
+      text2: "Первый семестр",
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Первый курс",
+      text2: "Первый семестр",
+
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Второй курс",
+      text2: "Первый семестр",
+
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Третий курс",
+      text2: "Первый семестр",
+
+    },
+    {
+      bgImage: "/img/schedule/schedule.png",
+      text1: "Четвертый курс",
+      text2: "Первый семестр",
+
     },
   ];
 
@@ -75,7 +125,7 @@ export default function ScheduleComponent() {
 
       <ScheduleGrid
         title="Расписание занятий 2024-2025 учебный год"
-        cards={cards}
+        cards={cards2}
       />
     </div>
   );

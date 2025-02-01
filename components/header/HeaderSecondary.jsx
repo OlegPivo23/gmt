@@ -49,7 +49,7 @@ export default function HeaderSecondary() {
             <img
               src="/img/header/logo.png"
               alt="logo"
-              className="p-[4px_1px] w-[60px] shadow-[0_0_4px_0_rgba(0,0,0,0.3)] bg-white "
+              className="p-[4px_1px] w-[60px]  "
             />
           </Link>
         </div>

@@ -6,15 +6,14 @@ import "swiper/css/pagination"; // Стили для пагинации
 import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import "./newsInfo.scss";
 
-// Массив данных для новостей
 const newsData = [
   {
     date: "01.01.01",
     images: [
+      "/img/news/image (34).png",
       "/img/news/card-bg.png",
       "/img/news/card-bg.png",
-      "/img/news/card-bg.png",
-    ], // Массив изображений для слайдера
+    ], 
     title:
       "Студенты ГМТ — победители и призеры XXVI республиканского научного конкурса молодых исследователей «Шаг в будущее Осетии»",
     description: [
@@ -32,49 +31,42 @@ export default function NewsInfoComponent() {
           key={index}
           className="border-2 border-opacity-25 border-black  bg-white px-4 md:px-[41px] py-6 md:py-[51px] mx-4 relative mb-6"
         >
-          {/* Дата */}
           <div className="absolute top-4 md:top-[50px] right-4 md:right-[50px] flex items-center">
             <img
               src="/img/news/calendar.png"
               alt="Календарь"
-              className="w-6 h-6 md:w-8 md:h-8"
             />
             <span className="p-2 md:p-4 font-medium text-[12px] md:text-[15px] text-black">
               {news.date}
             </span>
           </div>
 
-          {/* Контент */}
           <div className="flex flex-col lg:flex-row items-center justify-between gap-6 md:gap-[60px] relative">
-            {/* Контейнер для Swiper и стрелок */}
             <div className="flex-1 w-full lg:max-w-[50%] relative">
-              {/* Swiper с изображениями */}
               <Swiper
-                modules={[Navigation, Pagination]} // Подключаем модули Navigation и Pagination
+                modules={[Navigation, Pagination]}
                 navigation={{
-                  nextEl: `.swiper-button-next-${index}`, // Уникальный класс для кнопки "вперед"
-                  prevEl: `.swiper-button-prev-${index}`, // Уникальный класс для кнопки "назад"
+                  nextEl: `.swiper-button-next-${index}`, 
+                  prevEl: `.swiper-button-prev-${index}`, 
                 }}
                 pagination={{
-                  clickable: true, // Делаем пагинацию кликабельной
-                  el: `.swiper-pagination-${index}`, // Уникальный класс для пагинации
-                  type: "bullets", // Тип пагинации (точки)
+                  clickable: true, 
+                  el: `.swiper-pagination-${index}`, 
+                  type: "bullets", 
                 }}
-                loop={true} // Зацикливание слайдов
-                className=" shadow-[0_4px_21px_0_rgba(255,173,91,0.62)]"
+                loop={true} 
               >
                 {news.images.map((image, i) => (
                   <SwiperSlide key={i}>
                     <img
                       src={image}
                       alt={`Фоновое изображение ${i + 1}`}
-                      className="w-full h-full object-cover "
+                      className="object-cover "
                     />
                   </SwiperSlide>
                 ))}
               </Swiper>
 
-              {/* Кастомные стрелки (слева и справа от Swiper) */}
               <div className="absolute top-1/2 -translate-y-1/2 -left-12 md:-left-12 hidden md:block">
                 <div
                   className={`pointer-events-auto swiper-button-prev-${index}`}
@@ -101,7 +93,6 @@ export default function NewsInfoComponent() {
               ></div>
             </div>
 
-            {/* Текст (справа на больших экранах) */}
             <div className="flex-1 w-full lg:max-w-[50%]">
               <h2 className="font-extrabold text-[24px] md:text-[36px] text-black max-w-[534px] w-full">
                 {news.title}

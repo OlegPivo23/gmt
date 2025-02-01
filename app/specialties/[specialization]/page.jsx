@@ -1,6 +1,7 @@
 import MainLayout from "@/components/layouts/MainLayout";
 import OtherSpecialtiesComponent from "@/components/otherSpecialties/OtherSpecialtiesComponent";
 import SpecializationInfoComponent from "@/components/specializationInfo/SpecializationInfoComponent";
+import '../../main.scss'
 
 export default function SpecializationPage({ params, searchParams }) {
   const { specialization } = params;
