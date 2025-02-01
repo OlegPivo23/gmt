@@ -12,6 +12,24 @@
     "card13 card13";
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+
+  @media (max-width: 768px) {
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4"
+      "card5"
+      "card6"
+      "card7"
+      "card8"
+      "card9"
+      "card10"
+      "card11"
+      "card12"
+      "card13";
+    grid-template-columns: 1fr;
+  }
 }
 
 .specialties-grid > *:nth-child(1) {
