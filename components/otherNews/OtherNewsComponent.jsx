@@ -1,80 +1,47 @@
-"use client"; // Указываем, что это клиентский компонент
+"use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules"; // Импортируем модуль Navigation
-import "swiper/css"; // Основные стили Swiper
-import "swiper/css/navigation"; // Стили для навигации
-import { useRef } from "react"; // Используем useRef для доступа к Swiper API
+import { Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import { useRef } from "react";
+import { useRouter } from "next/navigation";
 
 import CardComponent from "../cards/CardComponent";
 import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import TitleComponent from "../UI/title/TitleComponent";
-import { useNavigation } from "../../hooks/useNavigation"; // Импортируем кастомный хук
-
-const cards = [
-  {
-    id: 1, // Добавляем уникальный ID для каждой новости
-    title: "Заголовок новости 1",
-    description: "Описание новости 1",
-    bgImg: "/img/news/card-bg.png",
-  },
-  {
-    id: 2,
-    title: "Заголовок новости 2",
-    description: "Описание новости 2",
-    bgImg: "/img/news/card-bg.png",
-  },
-  {
-    id: 3,
-    title: "Заголовок новости 3",
-    description: "Описание новости 3",
-    bgImg: "/img/news/card-bg.png",
-  },
-  {
-    id: 4,
-    title: "Заголовок новости 4",
-    description: "Описание новости 4",
-    bgImg: "/img/news/card-bg.png",
-  },
-  {
-    id: 5,
-    title: "Заголовок новости 5",
-    description: "Описание новости 5",
-    bgImg: "/img/news/card-bg.png",
-  },
-];
+import { newsData } from "@/db/newsData";
+import ShowButton from "../UI/button/ShowButtonComponent";
 
 export default function OtherNewsComponent() {
-  const navigateTo = useNavigation(); // Используем кастомный хук
-  const swiperRef = useRef(null); // Используем useRef для доступа к Swiper API
+  const router = useRouter();
+  const swiperRef = useRef(null);
 
-  const handlePrev = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slidePrev(); // Переключение на предыдущий слайд
-    }
-  };
+  const handlePrev = () => swiperRef.current?.swiper.slidePrev();
+  const handleNext = () => swiperRef.current?.swiper.slideNext();
 
-  const handleNext = () => {
-    if (swiperRef.current) {
-      swiperRef.current.swiper.slideNext(); // Переключение на следующий слайд
-    }
-  };
+  const handleShowAllClick = () => router.push("/all-news");
 
-  // Обработчик клика по карточке
   const handleCardClick = (card) => {
-    navigateTo(`/news/${card.id}`, {
-      title: card.title,
-      description: card.description,
-      bgImg: card.bgImg,
-    });
+    router.push(
+      `/news/${card.id}?title=${encodeURIComponent(
+        card.title
+      )}&description=${encodeURIComponent(
+        card.description
+      )}&bgImage=${encodeURIComponent(card.bgImage)}`
+    );
   };
 
   return (
-    <div>
-      <div className="flex justify-center">
-        <TitleComponent>Остальные новости</TitleComponent>
+    <div className="flex flex-col gap-[25px] px-[20px] md:px-[81px]">
+      <div className="flex flex-col items-start md:flex-row ">
+        <div className="flex items-center w-full ">
+          <TitleComponent>Остальные новости</TitleComponent>
+        </div>
+        <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
-      <div className="px-[81px] py-[43px] relative">
+
+      <div className=" py-[43px] relative">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
@@ -85,29 +52,26 @@ export default function OtherNewsComponent() {
             prevEl: ".swiper-button-prev",
           }}
           breakpoints={{
-            640: {
-              slidesPerView: 1,
-            },
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 3,
-            },
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
           }}
           loop={true}
         >
-          {cards.map((item, i) => (
-            <SwiperSlide key={i}>
+          {newsData.map((card) => (
+            <SwiperSlide key={card.id}>
               <div
-                onClick={() => handleCardClick(item)} // Добавляем обработчик клика
-                className="cursor-pointer" // Делаем карточку кликабельной
+                onClick={() => handleCardClick(card)}
+                className="cursor-pointer"
               >
                 <CardComponent
-                  title={item.title}
-                  description={item.description}
-                  maxWidth="450px"
-                  bgImage={item.bgImg}
+                  title={card.title}
+                  description={card.description}
+                  maxWidth="458px"
+                  maxHeight="322px"
+                  width="100%"
+                  height="100%"
+                  bgImage={card.bgImage}
                 />
               </div>
             </SwiperSlide>

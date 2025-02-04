@@ -27,13 +27,13 @@ export default function CardComponent({
       {/* Контент карточки */}
       <div className="absolute bottom-4 md:bottom-8 left-0 p-4">
         {title && (
-          <h2 className="font-extrabold text-[20px] md:text-[32px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+          <h2 className="font-extrabold text-[20px]  text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
             {title}
           </h2>
         )}
 
         {description && (
-          <p className="font-semibold text-[14px] md:text-[20px] text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
+          <p className="font-semibold text-[14px]  text-white [text-shadow:0_4px_4px_rgba(0,0,0,0.25)]">
             {description}
           </p>
         )}

@@ -1,12 +1,17 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 export default function HeaderBottomNav({ links }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  const router = useRouter();
+  const handleLogoClick = () => {
+    router.push("/");
   };
 
   useEffect(() => {
@@ -28,7 +33,8 @@ export default function HeaderBottomNav({ links }) {
           alt="Логотип"
           width={60}
           height={60}
-          className="p-1 w-[60px] shadow-md bg-white rounded-full"
+          className="p-1 w-[60px] shadow-md bg-white rounded-full cursor-pointer"
+          onClick={handleLogoClick}
         />
         <button className="lg:hidden p-2" onClick={toggleMenu}>
           <Image

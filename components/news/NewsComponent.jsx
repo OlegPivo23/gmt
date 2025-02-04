@@ -1,45 +1,26 @@
-"use client"; // Добавляем директиву для использования клиентских фич
-import { useRouter } from "next/navigation"; // Импортируем useRouter
+"use client";
+
+import { useRouter } from "next/navigation";
 import CardComponent from "../cards/CardComponent";
 import ShowButton from "../UI/button/ShowButtonComponent";
 import TitleComponent from "../UI/title/TitleComponent";
-import { useNavigation } from "../../hooks/useNavigation"; // Импортируем кастомный хук
-
-const cards = [
-  {
-    id: 1, // Добавляем уникальный ID для каждой новости
-    title: "Новость 1",
-    description: "Краткое описание новости 1",
-    bgImage: "/img/news/card-bg.png",
-  },
-  {
-    id: 2,
-    title: "Новость 2",
-    description: "Краткое описание новости 2",
-    bgImage: "/img/news/card-bg.png",
-  },
-  {
-    id: 3,
-    title: "Новость 3",
-    description: "Краткое описание новости 3",
-    bgImage: "/img/news/card-bg.png",
-  },
-];
+import { newsData } from "@/db/newsData";
 
 export default function NewsComponent() {
   const router = useRouter();
-  const navigateTo = useNavigation();
 
   const handleShowAllClick = () => {
     router.push("/all-news");
   };
 
   const handleCardClick = (card) => {
-    navigateTo(`/news/${card.id}`, {
-      title: card.title,
-      description: card.description,
-      bgImage: card.bgImage,
-    });
+    router.push(
+      `/news/${card.id}?title=${encodeURIComponent(
+        card.title
+      )}&description=${encodeURIComponent(
+        card.description
+      )}&bgImage=${encodeURIComponent(card.bgImage)}`
+    );
   };
 
   return (
@@ -49,7 +30,7 @@ export default function NewsComponent() {
         <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[21px]">
-        {cards.map((card, index) => (
+        {newsData.map((card, index) => (
           <div
             key={index}
             onClick={() => handleCardClick(card)}

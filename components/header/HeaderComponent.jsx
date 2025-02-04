@@ -78,7 +78,7 @@ export default function Header() {
         <div className="hidden lg:block">
           <HeaderTopNav links={headerTopLinks} />
         </div>
-        <HeaderBottomNav links={(headerBottomLinks, headerTopLinks)} />
+        <HeaderBottomNav links={(headerBottomLinks)} />
 
         {isMenuOpen && (
           <div className=" bg-white text-black  shadow-lg p-4 absolute top-0 left-0 right-0 z-50 ">
