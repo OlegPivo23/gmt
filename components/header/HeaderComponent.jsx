@@ -53,6 +53,12 @@ export default function Header() {
   const [currentImage, setCurrentImage] = useState(slides[0].imageUrl);
   const [bgLoaded, setBgLoaded] = useState(false);
 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   useEffect(() => {
     const img = new Image();
     img.src = currentImage;
@@ -69,8 +75,28 @@ export default function Header() {
       }}
     >
       <div>
-        <HeaderTopNav links={headerTopLinks} />
-        <HeaderBottomNav links={headerBottomLinks} />
+        <div className="hidden lg:block">
+          <HeaderTopNav links={headerTopLinks} />
+        </div>
+        <HeaderBottomNav links={(headerBottomLinks, headerTopLinks)} />
+
+        {isMenuOpen && (
+          <div className=" bg-white text-black  shadow-lg p-4 absolute top-0 left-0 right-0 z-50 ">
+            <ul className="flex flex-col gap-4">
+              {links?.map((item, i) => (
+                <li key={i} className="list-none">
+                  <Link
+                    href={item.link}
+                    className="block font-bold text-sm hover:text-orange-200 transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       <div className="hidden md:block">
