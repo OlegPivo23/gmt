@@ -9,7 +9,7 @@ export default function NavigationArrowComponent({
   return (
     <div
       className={`absolute top-1/2 -translate-y-1/2 ${
-        isLeft ? "left-[25px]" : "right-[25px]"
+        isLeft ? "left-[25px]" : "right-[25px] w-auto h-auto"
       } cursor-pointer ${className || ""}`}
       onClick={onClick}
     >
@@ -18,7 +18,9 @@ export default function NavigationArrowComponent({
         alt={isLeft ? "Левая стрелка" : "Правая стрелка"}
         width={12}
         height={24}
-        className={!isLeft ? "rotate-180" : ""}
+        className={
+          !isLeft ? "rotate-180 w-[12px] h-[24px]" : "w-[12px] h-[24px]"
+        }
       />
     </div>
   );

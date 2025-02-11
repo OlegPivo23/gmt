@@ -40,7 +40,6 @@ export default function NewsComponent() {
               title={card.title}
               description={card.description}
               bgImage={card.bgImage}
-              maxWidth="458px"
               maxHeight="322px"
               width="100%"
               height="100%"

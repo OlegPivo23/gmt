@@ -101,7 +101,7 @@ export default function Header() {
         )}
       </div>
 
-      <div className="hidden md:block">
+      <div className="hidden md:block w-auto h-auto">
         <NavigationArrowComponent
           direction="left"
           onClick={() => swiperRef.current?.slidePrev()}
