@@ -1,8 +1,24 @@
-import "./main.scss";
+import dynamic from "next/dynamic";
 import MainLayout from "@/components/layouts/MainLayout";
-import NewsComponent from "@/components/news/NewsComponent";
-import SpecialtiesComponent from "@/components/specialties/SpecialtiesComponent";
-import MovieAboutComponent from "@/components/movieAbout/MovieAboutComponent";
+
+// Динамический импорт компонентов
+const NewsComponent = dynamic(() => import("@/components/news/NewsComponent"), {
+  loading: () => <p>Загрузка новостей...</p>,
+});
+
+const SpecialtiesComponent = dynamic(
+  () => import("@/components/specialties/SpecialtiesComponent"),
+  {
+    loading: () => <p>Загрузка специализаций...</p>,
+  }
+);
+
+const MovieAboutComponent = dynamic(
+  () => import("@/components/movieAbout/MovieAboutComponent"),
+  {
+    loading: () => <p>Загрузка информации о фильме...</p>,
+  }
+);
 
 export default function MainPage() {
   return (
