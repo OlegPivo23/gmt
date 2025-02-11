@@ -11,13 +11,13 @@ const cards = [
     id: 1,
     title: "Защита в чрезвычайных ситуациях",
     description: "Описание новости 1",
-    bgImage: "/img/specialities/bg-img2.png",
+    bgImage: "/img/specialities/bg-img2.webp",
   },
   {
     id: 2,
     title: "Туризм и гостеприимство",
     description: "Описание новости 2",
-    bgImage: "/img/specialities/bg-img1.png",
+    bgImage: "/img/specialities/bg-img1.webp",
   },
   {
     id: 3,
