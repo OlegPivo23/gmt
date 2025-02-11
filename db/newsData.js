@@ -3,12 +3,12 @@ export const newsData = [
     id: 1,
     title: "В ГМТ начнут готовить кадры для курортов Северного Кавказа",
     description: "В ГМТ начнут готовить кадры для курортов Северного Кавказа ",
-    bgImage: "/img/header/header-bg2.jpg",
+    bgImage: "/img/header/header-bg2.webp",
     date: "23.10.2024",
     images: [
-      "/img/header/header-bg2.jpg",
-      "/img/header/header-bg2.jpg",
-      "/img/header/header-bg2.jpg",
+      "/img/header/header-bg2.webp",
+      "/img/header/header-bg2.webp",
+      "/img/header/header-bg2.webp",
     ],
     fullDescription: [
       `Сегодня в техникуме состоялась презентация пилотного проекта образовательного кластера по подготовке профессиональных кадров для обеспечения потребностей курортов Северного Кавказа на базе ГМТ. 
@@ -26,9 +26,9 @@ export const newsData = [
     title: "Итоги года и перспективы развития ",
     description:
       "О главных показателях, достижениях и новых вызовах, стоящих перед ГМТ рассказал директор образовательного учреждения Давид Бирагов",
-    bgImage: "/img/header/header-bg3.jpg",
+    bgImage: "/img/header/header-bg3.webp",
     date: "02.02.02",
-    images: ["/img/header/header-bg3.jpg", "/img/header/header-bg3.jpg"],
+    images: ["/img/header/header-bg3.webp", "/img/header/header-bg3.webp"],
     fullDescription: [
       `О главных показателях, достижениях и новых вызовах, стоящих перед ГМТ рассказал директор образовательного учреждения Давид Бирагов подводя итоги 2024 года.
 • Безусловно, одним из главных достижений стало вхождение в федеральный проект «Профессионалитет», благодаря чему на базе техникума будет создан образовательный кластер, где начнут готовить кадры для курортов Северного Кавказа.
@@ -43,9 +43,9 @@ export const newsData = [
     title: "О правилах дорожного движения рассказали студентам ГМТ  ",
     description:
       "В рамках Всероссийской недели безопасности, которая проходит с 16 по 20 сентября, в ГМТ прошли лекции о правилах дорожного движения.",
-    bgImage: "/img/header/header-bg4.jpg",
+    bgImage: "/img/header/header-bg4.webp",
     date: "02.02.02",
-    images: ["/img/header/header-bg4.jpg", "/img/header/header-bg4.jpg"],
+    images: ["/img/header/header-bg4.webp", "/img/header/header-bg4.webp"],
     fullDescription: [
       `В рамках Всероссийской недели безопасности, которая проходит с 16 по 20 сентября, в ГМТ прошли лекции о правилах дорожного движения.
 
