@@ -29,7 +29,7 @@ export default function NewsComponent() {
         <TitleComponent>Новости</TitleComponent>
         <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[21px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[21px]">
         {newsData.map((card, index) => (
           <div
             key={index}

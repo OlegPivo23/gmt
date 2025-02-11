@@ -2,9 +2,7 @@ import "./main.scss";
 import MainLayout from "@/components/layouts/MainLayout";
 import NewsComponent from "@/components/news/NewsComponent";
 import SpecialtiesComponent from "@/components/specialties/SpecialtiesComponent";
-import { AdditionallyComponent } from "@/components/additionally/AdditionallyComponent";
 import MovieAboutComponent from "@/components/movieAbout/MovieAboutComponent";
-import SwiperComponent from "@/components/swiper/SwiperComponent";
 
 export default function MainPage() {
   return (

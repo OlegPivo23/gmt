@@ -6,6 +6,8 @@ import HeaderTopNav from "./headerTop/HeaderTopNav";
 import style from "./header.module.scss";
 import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import HeaderBottomNav from "./headerTop/HeaderBottomNav";
+import "swiper/css";
+import "swiper/css/navigation";
 
 const slides = [
   {
@@ -65,15 +67,6 @@ export default function Header() {
     img.onload = () => setBgLoaded(true);
   }, [currentImage]);
 
-  useEffect(() => {
-    const preloadImages = () => {
-      slides.forEach((slide) => {
-        const img = new Image();
-        img.src = slide.imageUrl.replace(/\.(png|jpg)$/, ".jpg");
-      });
-    };
-    preloadImages();
-  }, []);
   return (
     <header
       className={style.header}

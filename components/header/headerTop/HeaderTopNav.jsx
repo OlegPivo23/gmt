@@ -1,10 +1,7 @@
 import { useState } from "react";
-import Image from "next/image";
 import Link from "next/link";
 
 export default function HeaderTopNav({ links }) {
-  
-
   return (
     <div className="border-b border-white/25 shadow-sm">
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
