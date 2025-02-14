@@ -8,7 +8,7 @@ import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowCompo
 import HeaderBottomNav from "./headerTop/HeaderBottomNav";
 import "swiper/css";
 import "swiper/css/navigation";
-import { slides, headerTopLinks, headerBottomLinks } from "../../db/headerInfo";
+import { slides, headerTopLinks, headerBottomLinks, headerLinks } from "../../db/headerInfo";
 
 export default function Header() {
   const swiperRef = useRef(null);
@@ -31,9 +31,9 @@ export default function Header() {
       }}
     >
       <div>
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <HeaderTopNav links={headerTopLinks} />
-        </div>
+        </div> */}
         <HeaderBottomNav links={headerBottomLinks} />
       </div>
 
@@ -48,7 +48,7 @@ export default function Header() {
         />
       </div>
 
-      <div className="px-6 sm:px-8 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px] relative">
+      <div className="px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px] relative">
         <Swiper
           modules={[Navigation]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}

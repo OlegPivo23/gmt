@@ -38,3 +38,14 @@ export const headerBottomLinks = [
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
 ];
+
+export const headerLinks = [
+  { name: "Абитуриентам", link: "/applicants" },
+  { name: "О техникуме", link: "/about" },
+  { name: "Студентам", link: "/students" },
+  { name: "Методическая работа", link: "/methodical" },
+  { name: "Поступление", link: "/entrance" },
+  { name: "Образование", link: "/education" },
+  { name: "Документы", link: "/documents" },
+  { name: "Руководство", link: "/guide" },
+];
