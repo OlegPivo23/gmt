@@ -1,19 +1,32 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Navigation, Pagination } from "swiper/modules";
 import HeaderTopNav from "./headerTop/HeaderTopNav";
 import style from "./header.module.scss";
 import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import HeaderBottomNav from "./headerTop/HeaderBottomNav";
 import "swiper/css";
 import "swiper/css/navigation";
-import { slides, headerTopLinks, headerBottomLinks, headerLinks } from "../../db/headerInfo";
+import "swiper/css/pagination";
+import {
+  slides,
+  headerTopLinks,
+  headerBottomLinks,
+  headerLinks,
+} from "../../db/headerInfo";
+import { useSelector, useDispatch } from "react-redux";
+import { fetchNews } from "@/stores/newsSlice";
 
 export default function Header() {
+  const dispatch = useDispatch();
   const swiperRef = useRef(null);
   const [currentImage, setCurrentImage] = useState(slides[0].imageUrl);
   const [bgLoaded, setBgLoaded] = useState(false);
+
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, []);
 
   useEffect(() => {
     const img = new Image();
@@ -31,9 +44,6 @@ export default function Header() {
       }}
     >
       <div>
-        {/* <div className="hidden lg:block">
-          <HeaderTopNav links={headerTopLinks} />
-        </div> */}
         <HeaderBottomNav links={headerBottomLinks} />
       </div>
 
@@ -50,7 +60,7 @@ export default function Header() {
 
       <div className="px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px] relative">
         <Swiper
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           loop={true}
           onSlideChange={(swiper) =>

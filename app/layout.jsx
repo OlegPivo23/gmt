@@ -1,14 +1,19 @@
+'use client'
 import "./globals.scss";
+import { Provider } from "react-redux";
+import store from "../stores/store";
 
-export const metadata = {
-  title: "ГМТ",
-  description: "Веб приложение ГМТ",
-};
+// export const metadata = {
+//   title: "ГМТ",
+//   description: "Веб приложение ГМТ",
+// };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <Provider store={store}>
+        <body>{children}</body>
+      </Provider>
     </html>
   );
 }

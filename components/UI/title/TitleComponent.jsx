@@ -1,5 +1,10 @@
-export default function TitleComponent({ children }) {
+export default function TitleComponent({ children, color = "#1f1f1f" }) {
   return (
-    <h2 className="font-extrabold text-[30px] md:text-[40px] text-[#1f1f1f]">{children}</h2>
+    <h2
+      className="font-montserrat font-extrabold text-[30px] md:text-[40px]"
+      style={{ color }} 
+    >
+      {children}
+    </h2>
   );
 }
