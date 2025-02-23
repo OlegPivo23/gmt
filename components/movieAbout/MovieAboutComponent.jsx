@@ -15,7 +15,7 @@ export default function MovieAboutComponent() {
     <div className="flex flex-col gap-[25px]">
       <TitleComponent>Фильм о нас</TitleComponent>
       <div>
-        <div className="rounded-[45px] w-full max-w-[1416px] h-[300px] md:h-[400px] lg:h-[500px] xl:h-[647px] bg-[#3d3d3d] relative overflow-hidden">
+        <div className=" w-full max-w-[1416px] h-[300px] md:h-[400px] lg:h-[500px] xl:h-[647px] bg-[#3d3d3d] relative overflow-hidden">
           {showVideo ? (
             <iframe
               className="w-full h-full"

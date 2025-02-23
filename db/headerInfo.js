@@ -1,5 +1,10 @@
 export const slides = [
   {
+    title: "ВГМТ",
+    description: "Сохраняя традиции - создаём будущее!",
+    imageUrl: "/img/header/header-bg5.webp",
+  },
+  {
     title: "Создаем будущее своими руками",
     description:
       "Директор ГМТ Давид Бирагов принял участие в форуме среднего профессионального образования, организатором которого выступает Министерство просвещения России при поддержке Правительства Калужской области.",
@@ -33,8 +38,6 @@ export const headerTopLinks = [
 ];
 
 export const headerBottomLinks = [
-  { name: "Поступление", link: "/entrance" },
-  { name: "Образование", link: "/education" },
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
 ];
@@ -44,8 +47,6 @@ export const headerLinks = [
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
   { name: "Методическая работа", link: "/methodical" },
-  { name: "Поступление", link: "/entrance" },
-  { name: "Образование", link: "/education" },
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
 ];
