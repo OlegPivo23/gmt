@@ -16,7 +16,7 @@ const contacts = [
     title: "Приемная комиссия",
     text1: "362003, РСО — Алания, Владикавказ пр.Коста, 195",
     span: "Email:",
-    text2: "VODNPT@mail.ru",
+    text2: " vgmt@mon.alania.gov.ru",
   },
 ];
 

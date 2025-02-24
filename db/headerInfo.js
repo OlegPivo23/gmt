@@ -67,13 +67,11 @@ export const headerTopLinks = [
 export const headerBottomLinks = [
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
+  { name: "Методическая работа", link: "/methodical" },
 ];
 
 export const headerLinks = [
   { name: "Абитуриентам", link: "/applicants" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
-  { name: "Методическая работа", link: "/methodical" },
-  { name: "Документы", link: "/documents" },
-  { name: "Руководство", link: "/guide" },
 ];
