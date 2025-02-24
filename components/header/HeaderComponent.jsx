@@ -1,7 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules"; // Добавляем Autoplay
+import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import HeaderTopNav from "./headerTop/HeaderTopNav";
 import style from "./header.module.scss";
 import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
@@ -9,7 +9,7 @@ import HeaderBottomNav from "./headerTop/HeaderBottomNav";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import "swiper/css/autoplay"; // Добавляем стили для автоплея
+import "swiper/css/autoplay";
 import {
   slides,
   slidesMobile,
@@ -23,18 +23,24 @@ import { fetchNews } from "@/stores/newsSlice";
 export default function Header() {
   const dispatch = useDispatch();
   const swiperRef = useRef(null);
-  const [currentImage, setCurrentImage] = useState(slides[0].imageUrl);
+  const [currentImageMobile, setCurrentImageMobile] = useState(
+    slidesMobile[0].imageUrl
+  );
+  const [currentImageDesktop, setCurrentImageDesktop] = useState(
+    slides[0].imageUrl
+  );
   const [bgLoaded, setBgLoaded] = useState(false);
 
-  useEffect(() => {
-    dispatch(fetchNews());
-  }, []);
+  const currentImage =
+    typeof window !== "undefined" && window.innerWidth < 768
+      ? currentImageMobile
+      : currentImageDesktop;
 
-  // useEffect(() => {
-  //   const img = new Image();
-  //   img.src = currentImage;
-  //   img.onload = () => setBgLoaded(true);
-  // }, [currentImage]);
+  useEffect(() => {
+    const img = new Image();
+    img.src = currentImage;
+    img.onload = () => setBgLoaded(true);
+  }, [currentImage]);
 
   return (
     <header
@@ -47,18 +53,17 @@ export default function Header() {
     >
       <div>
         <HeaderBottomNav links={headerBottomLinks} />
-        
       </div>
 
       {/* Блок для мобильных устройств (до sm) */}
       <div className="block md:hidden px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px] relative">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]} // Добавляем Autoplay
+          modules={[Navigation, Pagination, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }} // Автоплей каждые 5 секунд
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           onSlideChange={(swiper) =>
-            setCurrentImage(slidesMobile[swiper.realIndex].imageUrl)
+            setCurrentImageMobile(slidesMobile[swiper.realIndex].imageUrl)
           }
         >
           {slidesMobile.map((slide, index) => (
@@ -77,12 +82,12 @@ export default function Header() {
       {/* Блок для десктопов (начиная с sm) */}
       <div className="hidden md:block px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px] relative">
         <Swiper
-          modules={[Navigation, Pagination, Autoplay]} // Добавляем Autoplay
+          modules={[Navigation, Pagination, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }} // Автоплей каждые 5 секунд
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           onSlideChange={(swiper) =>
-            setCurrentImage(slides[swiper.realIndex].imageUrl)
+            setCurrentImageDesktop(slides[swiper.realIndex].imageUrl)
           }
         >
           {slides.map((slide, index) => (
