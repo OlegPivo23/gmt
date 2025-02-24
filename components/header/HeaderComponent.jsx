@@ -30,11 +30,11 @@ export default function Header() {
     dispatch(fetchNews());
   }, []);
 
-  useEffect(() => {
-    const img = new Image();
-    img.src = currentImage;
-    img.onload = () => setBgLoaded(true);
-  }, [currentImage]);
+  // useEffect(() => {
+  //   const img = new Image();
+  //   img.src = currentImage;
+  //   img.onload = () => setBgLoaded(true);
+  // }, [currentImage]);
 
   return (
     <header
