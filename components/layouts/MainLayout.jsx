@@ -4,7 +4,7 @@ import LinksComponent from "../links/LinksComponent";
 
 export default function MainLayout({ children }) {
   return (
-    <div className="flex flex-col gap-[90px] bg-white">
+    <div className="flex flex-col gap-[40px] md:gap-[50px] lg:gap-[90px] bg-white">
       <header>
         <HeaderComponent />
       </header>

@@ -90,9 +90,9 @@ export default function HeaderSecondary() {
       {isMenuOpen && (
         <div className="md:hidden absolute w-full bg-white z-50 shadow-lg">
           <nav>
-            <ul className="flex flex-col items-center py-4">
+            <ul className="flex flex-col  p-4">
               {headerLinks?.map((item, i) => (
-                <li key={i} className="w-full text-center">
+                <li key={i} className="w-full ">
                   <Link
                     href={item.link}
                     className="block py-4 font-extrabold text-[15px] text-black hover:bg-gray-100"
