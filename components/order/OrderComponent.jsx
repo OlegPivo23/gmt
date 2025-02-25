@@ -8,7 +8,7 @@ export function OrderComponent() {
     <div className="flex flex-col gap-[76px]">
       <div className="px-[33px] flex flex-col gap-5">
         <TitleComponent>Приказ о зачислении</TitleComponent>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {cards.map((item, i) => (
             <CardComponent
               key={i}
@@ -22,7 +22,7 @@ export function OrderComponent() {
         <TitleComponent>
           Приказ о зачислении на коммерческую форму обучения
         </TitleComponent>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:justify-center gap-4 ">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 ">
           {cards.map((item, i) => (
             <CardComponent
               key={i}
