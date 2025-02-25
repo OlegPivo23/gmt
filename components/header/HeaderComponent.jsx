@@ -71,7 +71,7 @@ export default function Header() {
               <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white text-shadow">
                 {slide.title}
               </h2>
-              <p className="font-semibold text-base sm:text-lg lg:text-xl text-white text-shadow mt-4">
+              <p className="font-semibold text-base sm:text-lg lg:text-xl text-white text-shadow mt-4 ">
                 {slide.description}
               </p>
             </SwiperSlide>
@@ -86,18 +86,30 @@ export default function Header() {
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           loop={true}
           autoplay={{ delay: 5000, disableOnInteraction: false }}
+          spaceBetween={20}
           onSlideChange={(swiper) =>
             setCurrentImageDesktop(slides[swiper.realIndex].imageUrl)
           }
         >
           {slides.map((slide, index) => (
-            <SwiperSlide key={index}>
-              <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white text-shadow">
-                {slide.title}
-              </h2>
-              <p className="font-semibold text-base sm:text-lg lg:text-xl text-white text-shadow mt-4">
-                {slide.description}
-              </p>
+            <SwiperSlide
+              key={index}
+              className={index === 0 ? style.firstSlide : ""}
+            >
+              <div
+                className={
+                  index === 0
+                    ? "flex flex-col justify-end items-center h-full  fixed w-full "
+                    : ""
+                }
+              >
+                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white text-shadow">
+                  {slide.title}
+                </h2>
+                <p className="font-semibold text-base sm:text-lg lg:text-xl text-white text-shadow mt-4 pr-10">
+                  {slide.description}
+                </p>
+              </div>
             </SwiperSlide>
           ))}
         </Swiper>

@@ -2,7 +2,7 @@ export const slides = [
   {
     title: "ВГМТ",
     description: "Сохраняя традиции - создаём будущее!",
-    imageUrl: "/img/header/header-bg5.webp",
+    imageUrl: "/img/header/header-image.webp",
   },
   {
     title: "Создаем будущее своими руками",
@@ -71,6 +71,15 @@ export const headerBottomLinks = [
 ];
 
 export const headerLinks = [
+  { name: "Абитуриентам", link: "/applicants" },
+  { name: "О техникуме", link: "/about" },
+  { name: "Студентам", link: "/students" },
+];
+
+export const footerLinks = [
+  { name: "Документы", link: "/documents" },
+  { name: "Руководство", link: "/guide" },
+  { name: "Методическая работа", link: "/methodical" },
   { name: "Абитуриентам", link: "/applicants" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },

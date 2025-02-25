@@ -1,9 +1,9 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link"; 
+import Link from "next/link";
 import TitleComponent from "../UI/title/TitleComponent";
 import { useRouter } from "next/navigation";
-import { headerLinks } from "@/db/headerInfo";
+import { footerLinks } from "@/db/headerInfo";
 
 const links = [
   { text: "О техникуме", link: "/about" },
@@ -12,7 +12,6 @@ const links = [
   { text: "Контакты", link: "/contacts" },
   { text: "Документы", link: "/documents" },
 ];
-
 
 const socialIcons = [
   {
@@ -35,16 +34,18 @@ export default function LinksComponent() {
 
   return (
     <div className="flex flex-col gap-[45px]">
-      <TitleComponent color="#ffffff">Ссылки</TitleComponent>
+      <div className="pt-[40px]">
+        <TitleComponent color="#ffffff">Ссылки</TitleComponent>
+      </div>
 
       {/* Сетка ссылок */}
       <div className="grid grid-cols-1 justify-center items-center md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {headerLinks.map((item, i) => (
+        {footerLinks.map((item, i) => (
           <div
             key={i}
             className="font-montserrat font-medium text-2xl text-white px-[0] md:px-[50px] lg:px-[100px] cursor-pointer border-r border-white last:border-r-0"
           >
-            <Link href={item.link}>{item.name}</Link> 
+            <Link href={item.link}>{item.name}</Link>
           </div>
         ))}
       </div>

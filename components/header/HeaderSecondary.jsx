@@ -1,9 +1,8 @@
 "use client";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import style from "./header.module.scss";
 import { useState } from "react";
-
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 const headerLinks = [
   { name: "Абитуриентам", link: "/applicants" },
   { name: "Руководство техникума", link: "/guide" },
@@ -54,7 +53,7 @@ export default function HeaderSecondary() {
           </Link>
         </div>
 
-        <nav className="hidden md:block">
+        <nav className="hidden sm:block">
           <ul className="flex gap-[50px]">
             {headerLinks?.slice(0, 5).map((item, i) => (
               <li key={i} className="font-extrabold text-[15px] text-black">

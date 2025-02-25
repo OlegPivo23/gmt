@@ -43,7 +43,7 @@ export default function GuideComponent() {
               {person.education.map((edu, idx) => (
                 <li
                   key={idx}
-                  className="font-montserrat text-base sm:text-lg md:text-xl lg:text-2xl text-[#000] leading-relaxed"
+                  className="font-montserrat text-[20px] text-[#000] leading-relaxed"
                 >
                   {edu}
                 </li>
@@ -62,7 +62,7 @@ export default function GuideComponent() {
                   {person.scientificWorks.map((work, idx) => (
                     <li
                       key={idx}
-                      className="font-montserrat text-base sm:text-lg md:text-xl lg:text-2xl text-[#000] leading-relaxed"
+                      className="font-montserrat text-[20px] text-[#000] leading-relaxed"
                     >
                       {work}
                     </li>
@@ -70,14 +70,14 @@ export default function GuideComponent() {
                 </>
               )}
               <li>
-                <span className="font-montserrat font-extrabold text-[20px] text-[#1f1f1f]">
+                <span className="font-montserrat font-extrabold  text-[20px] text-[#1f1f1f]">
                   Опыт работы
                 </span>
               </li>
               {person.experience.map((exp, idx) => (
                 <li
                   key={idx}
-                  className="font-montserrat text-base sm:text-lg md:text-xl lg:text-2xl text-[#000] leading-relaxed"
+                  className="font-montserrat text-[20px] text-[#000] "
                 >
                   {exp}
                 </li>

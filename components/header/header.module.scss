@@ -41,6 +41,16 @@
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   background: #fff;
   display: flex;
+  gap: 30px;
   align-items: center;
   padding: 10px 16px;
+  padding-left: 87px;
+}
+
+.firstSlide {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
 }

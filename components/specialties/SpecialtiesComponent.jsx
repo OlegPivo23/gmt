@@ -82,8 +82,10 @@ export default function SpecialtiesComponent() {
               title={item.title}
               description={item.description}
               bgImage={item.bgImage}
+              borderRadius="30px"
               height={item.height}
               buttonText={item.buttonText}
+              hasGradient="true"
             />
           </div>
         ))}

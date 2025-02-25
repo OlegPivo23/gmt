@@ -3,11 +3,13 @@ import Image from "next/image";
 
 export default function DocumentForm() {
   return (
-    <section className="py-8 md:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
+    <section className=" px-4 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl flex flex-col gap-6 md:gap-8 lg:gap-10">
-        <TitleComponent className="text-center text-2xl sm:text-3xl lg:text-4xl">
-          Заочная форма обучения (11 класс)
-        </TitleComponent>
+        <div className="text-center">
+          <TitleComponent className="text-center text-2xl sm:text-3xl lg:text-4xl">
+            Заочная форма обучения (11 класс)
+          </TitleComponent>
+        </div>
 
         <div className="relative w-full overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-shadow duration-300">
           <Image

@@ -7,7 +7,7 @@ import DocumentsListComponent from "@/components/documentsList/DocumentsListComp
 import DocumentForm from "@/components/documentForm/DocumentForm";
 export default function ApplicantsPage() {
   return (
-    <div className="page">
+    <div className="page gap-[30px] ">
       <SecondaryLayout>
         <section>
           <OrderComponent />

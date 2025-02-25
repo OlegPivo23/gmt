@@ -9,12 +9,16 @@ export default function CardComponent({
   height = "auto",
   borderRadius = "0",
   footerText,
+  className = "",
+  hasGradient = false,
 }) {
   return (
     <div
-      className="box-border object-cover aspect-[1/1] cursor-pointer relative"
+      className={`box-border object-cover aspect-[1/1] cursor-pointer relative ${className}`} 
       style={{
-        backgroundImage: `url(${bgImage})`,
+        backgroundImage: hasGradient
+          ? `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 173, 91, 0.67) 100%), url(${bgImage})`
+          : `url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         maxWidth: maxWidth,
@@ -52,6 +56,8 @@ export default function CardComponent({
           />
         </div>
       )}
+
+      {/* Футер (если есть) */}
       {footerText && (
         <div className="absolute bottom-0 left-0 w-full bg-white p-4 bg-white shadow-[0_-4px_13px_-5px_rgba(0,0,0,0.25)] ">
           <h2 className="font-bold text-[20px] underline decoration-transparent">

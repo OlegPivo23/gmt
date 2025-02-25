@@ -13,7 +13,7 @@ export default function AboutPage() {
   return (
     <div className="page">
       <SecondaryLayout>
-        <div className="flex flex-col gap-[20px] px-[20px] lg:px-[90px] mb-[200px]">
+        <div className="flex flex-col gap-[20px] px-[20px] lg:px-[90px]">
           <TitleComponent>История техникума</TitleComponent>
           <AboutTextComponent />
           <div className="flex flex-col gap-6">

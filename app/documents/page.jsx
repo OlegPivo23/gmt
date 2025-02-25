@@ -187,9 +187,8 @@ export default function DocumentsPage() {
               {docs1.map((doc, i) => (
                 <a href={doc.link} key={i}>
                   <CardComponent
-                    width="100%"
-                    height="100%"
-                    maxHeight="257px"
+                    hasGradient="true"
+                    className="max-w-auto max-h-[256px] lg:max-w-316px"
                     bgImage={doc.bgImage}
                     footerText={doc.text}
                   />
@@ -207,9 +206,8 @@ export default function DocumentsPage() {
             {docs2.map((doc, i) => (
               <a href={doc.link} key={i}>
                 <CardComponent
-                  maxHeight="257px"
-                  width="100%"
-                  height="100%"
+                  hasGradient="true"
+                  className="max-w-auto max-h-[256px] lg:max-w-316px"
                   bgImage={doc.bgImage}
                   footerText={doc.text}
                 />
