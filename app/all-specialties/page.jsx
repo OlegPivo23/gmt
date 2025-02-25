@@ -112,7 +112,8 @@ export default function AllSpecialtiesPage() {
                   title={card.title}
                   description={card.description}
                   bgImage={card.bgImage}
-                  maxHeight="254px"
+                  maxHeight="220px"
+                  hasGradient='true'
                 />
               </div>
             ))}

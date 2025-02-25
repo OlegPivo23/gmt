@@ -10,7 +10,6 @@ const specialities = [
     title: "Туризм и гостеприимство",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img1.webp",
-    height: "254px",
     buttonText: "Подробнее",
   },
   {
@@ -18,7 +17,6 @@ const specialities = [
     title: "Экономика и бухгалтерский учет (по отраслям)",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img5.webp",
-    height: "254px",
     buttonText: "Подробнее",
   },
   {
@@ -26,7 +24,6 @@ const specialities = [
     title: "Земельно-имущественные отношения​.",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img4.webp",
-    height: "254px",
     buttonText: "Подробнее",
   },
   {
@@ -34,7 +31,6 @@ const specialities = [
     title: "Оператор информационных систем и ресурсов ",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img3.webp",
-    height: "254px",
     buttonText: "Подробнее",
   },
   {
@@ -42,7 +38,6 @@ const specialities = [
     title: "Защита в чрезвычайных ситуациях",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img2.webp",
-    height: "254px",
     buttonText: "Подробнее",
   },
 ];
@@ -83,7 +78,7 @@ export default function SpecialtiesComponent() {
               description={item.description}
               bgImage={item.bgImage}
               borderRadius="30px"
-              height={item.height}
+              className="max-h-[220px]"
               buttonText={item.buttonText}
               hasGradient="true"
             />

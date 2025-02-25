@@ -17,7 +17,7 @@ const specialities = [
     title: "Туризм и гостеприимство",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img1.png",
-    height: "254px",
+    height: "220px",
     buttonText: "Подробнее",
   },
   {
@@ -25,7 +25,7 @@ const specialities = [
     title: "Экономика и бухгалтерский учет (по отраслям)",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img5.png",
-    height: "254px",
+    height: "220px",
     buttonText: "Подробнее",
   },
   {
@@ -33,7 +33,7 @@ const specialities = [
     title: "Земельно-имущественные отношения​.",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img4.png",
-    height: "254px",
+    height: "220px",
     buttonText: "Подробнее",
   },
   {
@@ -41,7 +41,7 @@ const specialities = [
     title: "Оператор информационных систем и ресурсов ",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img3.png",
-    height: "254px",
+    height: "220px",
     buttonText: "Подробнее",
   },
   {
@@ -49,7 +49,7 @@ const specialities = [
     title: "Защита в чрезвычайных ситуациях",
     description: "Описание специальности",
     bgImage: "/img/specialities/bg-img2.png",
-    height: "254px",
+    height: "220px",
     buttonText: "Подробнее",
   },
 ];
