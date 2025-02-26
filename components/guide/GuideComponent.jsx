@@ -7,7 +7,7 @@ export default function GuideComponent() {
   return (
     <div className="px-4 md:px-12 lg:px-24 xl:px-32">
       <TitleComponent>Администрация</TitleComponent>
-      <div className="flex flex-col gap-[113px]">
+      <div className="flex flex-col gap-[30px]">
         {administrationData.map((person, index) => (
           <div
             key={index}
