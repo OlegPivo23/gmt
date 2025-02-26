@@ -25,7 +25,7 @@ const images = [
 
 export default function GalaryComponent() {
   const pathname = usePathname(); 
-  const displayedImages = pathname === "/galary" ? images : images.slice(0, 9); 
+  const displayedImages = pathname === "/gallery" ? images : images.slice(0, 9); 
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">

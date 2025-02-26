@@ -16,7 +16,7 @@ const specialities = [
     id: 1,
     title: "Туризм и гостеприимство",
     description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img1.png",
+    bgImage: "/img/specialities/bg-img1.webp",
     height: "220px",
     buttonText: "Подробнее",
   },
@@ -24,7 +24,7 @@ const specialities = [
     id: 2,
     title: "Экономика и бухгалтерский учет (по отраслям)",
     description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img5.png",
+    bgImage: "/img/specialities/bg-img5.webp",
     height: "220px",
     buttonText: "Подробнее",
   },
@@ -32,7 +32,7 @@ const specialities = [
     id: 3,
     title: "Земельно-имущественные отношения​.",
     description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img4.png",
+    bgImage: "/img/specialities/bg-img4.webp",
     height: "220px",
     buttonText: "Подробнее",
   },
@@ -40,7 +40,7 @@ const specialities = [
     id: 4,
     title: "Оператор информационных систем и ресурсов ",
     description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img3.png",
+    bgImage: "/img/specialities/bg-img3.webp",
     height: "220px",
     buttonText: "Подробнее",
   },
@@ -48,7 +48,7 @@ const specialities = [
     id: 5,
     title: "Защита в чрезвычайных ситуациях",
     description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img2.png",
+    bgImage: "/img/specialities/bg-img2.webp",
     height: "220px",
     buttonText: "Подробнее",
   },
@@ -83,11 +83,11 @@ export default function OtherSpecialtiesComponent() {
       <div className="text-center">
         <TitleComponent>Остальные специальности</TitleComponent>
       </div>
-      <div className="relative lg:px-[50px]">
+      <div className="relative lg:px-[90px] px-4 sm:px-6  ">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
-          spaceBetween={30}
+          spaceBetween={25}
           slidesPerView={1}
           navigation={{
             nextEl: ".swiper-button-next",
@@ -106,22 +106,25 @@ export default function OtherSpecialtiesComponent() {
           }}
           loop={true}
         >
-          {specialities.map((item) => (
-            <SwiperSlide key={item.id}>
-              <div
-                onClick={() => handleCardClick(item)}
-                className="cursor-pointer"
-              >
-                <CardComponent
-                  title={item.title}
-                  description={item.description}
-                  bgImage={item.bgImage}
-                  maxWidth="450px"
-                  maxHeight="390px"
-                />
-              </div>
-            </SwiperSlide>
-          ))}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+            {specialities.map((item) => (
+              <SwiperSlide key={item.id}>
+                <div
+                  onClick={() => handleCardClick(item)}
+                  className="cursor-pointer "
+                >
+                  <CardComponent
+                    title={item.title}
+                    hasGradient="true"
+                    borderRadius="30px"
+                    description={item.description}
+                    bgImage={item.bgImage}
+                    className="max-w-[390px] w-full max-h-[339px]"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </div>
         </Swiper>
 
         <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">

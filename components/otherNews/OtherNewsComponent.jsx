@@ -34,14 +34,14 @@ export default function OtherNewsComponent() {
 
   return (
     <div className="flex flex-col gap-[25px] px-[20px] md:px-[81px]">
-      <div className="flex flex-col items-start md:flex-row ">
+      <div className="flex flex-col items-start md:flex-row justify-between">
         <div className="flex items-center w-full ">
           <TitleComponent>Остальные новости</TitleComponent>
         </div>
         <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
 
-      <div className=" py-[43px] relative">
+      <div className="py-[43px] relative">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
@@ -67,10 +67,8 @@ export default function OtherNewsComponent() {
                 <CardComponent
                   title={card.title}
                   description={card.description}
-                  maxWidth="458px"
-                  maxHeight="322px"
-                  width="100%"
-                  height="100%"
+                  hasGradient="true"
+                  className="max-w-[390px] w-full max-h-[390px]"
                   bgImage={card.bgImage}
                 />
               </div>
@@ -79,13 +77,11 @@ export default function OtherNewsComponent() {
         </Swiper>
 
         {/* Кастомные стрелки */}
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">
-          <div onClick={handlePrev} className="pointer-events-auto">
-            <NavigationArrowComponent direction="left" />
-          </div>
-          <div onClick={handleNext} className="pointer-events-auto">
-            <NavigationArrowComponent direction="right" />
-          </div>
+        <div onClick={handlePrev} className="pointer-events-auto z-10">
+          <NavigationArrowComponent direction="left" />
+        </div>
+        <div onClick={handleNext} className="pointer-events-auto z-10">
+          <NavigationArrowComponent direction="right" />
         </div>
       </div>
     </div>

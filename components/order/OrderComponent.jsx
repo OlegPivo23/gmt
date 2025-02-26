@@ -18,10 +18,12 @@ export function OrderComponent() {
           ))}
         </div>
       </div>
-      <div className="px-[33px] flex flex-col gap-5">
-        <TitleComponent>
-          Приказ о зачислении на коммерческую форму обучения
-        </TitleComponent>
+      <div className="px-[33px] flex flex-col gap-5 ">
+        <div className="max-w-[771px]">
+          <TitleComponent>
+            Приказ о зачислении на коммерческую форму обучения
+          </TitleComponent>
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3  gap-4 ">
           {cards.map((item, i) => (
             <CardComponent

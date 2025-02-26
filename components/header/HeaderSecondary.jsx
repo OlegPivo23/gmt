@@ -9,7 +9,7 @@ const headerLinks = [
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
   { name: "Методическая работа", link: "/methodical" },
-  { name: "Галерея", link: "/galary" },
+  { name: "Галерея", link: "/gallery" }, // Исправлено /galary → /gallery
   { name: "Документы", link: "/documents" },
   { name: "Материально-техническое обеспечение", link: "/logistical-support" },
   {
@@ -24,7 +24,7 @@ const pageDescriptions = {
   "/students": "Студентам - полезная информация для студентов",
   "/methodical": "Методическая работа - материалы для преподавателей",
   "/guide": "Педагогический состав",
-  "/galary": "О техникуме",
+  "/gallery": "Галерея - фотографии и события техникума", // Исправлено /galary → /gallery
   "/documents": "Студентам",
   "/logistical-support": "О техникуме",
   "/financial-economic-activities": "О техникуме",

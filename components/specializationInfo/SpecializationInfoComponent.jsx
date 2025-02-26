@@ -17,7 +17,9 @@ export default function SpecializationInfoPage() {
           title={title}
           description={description}
           bgImage={bgImage}
-          height="322px"
+          height="220px"
+          hasGradient="true"
+          borderRadius="30px"
         />
         <div className="flex flex-col items-center justify-center gap-[15px] ">
           <TitleComponent>{title}</TitleComponent>

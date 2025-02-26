@@ -35,7 +35,7 @@ const cards = [
     id: 5,
     title: "Оператор информационных систем и ресурсов",
     description: "Описание новости 5",
-    bgImage: "/img/specialities/bg-img3.png",
+    bgImage: "/img/specialities/bg-img3.webp",
   },
   {
     id: 6,
@@ -107,13 +107,17 @@ export default function AllSpecialtiesPage() {
           <TitleComponent>Все специальности</TitleComponent>
           <div className="specialties-grid">
             {cards.map((card) => (
-              <div onClick={() => handleCardClick(card)} key={card.id} className="md:grid-cols-1">
+              <div
+                onClick={() => handleCardClick(card)}
+                key={card.id}
+                className="md:grid-cols-1"
+              >
                 <CardComponent
                   title={card.title}
                   description={card.description}
                   bgImage={card.bgImage}
                   maxHeight="220px"
-                  hasGradient='true'
+                  hasGradient="true"
                 />
               </div>
             ))}

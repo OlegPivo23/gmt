@@ -5,11 +5,12 @@ const ScheduleGrid = ({ title, cards }) => {
   return (
     <div className="flex flex-col gap-[25px] px-[43px]">
       <TitleComponent>{title}</TitleComponent>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[52px] justify-center items-start">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 justify-center items-start">
         {cards.map((card, index) => (
           <div key={index} className="flex flex-col items-center">
             <CardComponent
               bgImage={card.bgImage}
+              borderRadius="30px"
               hasGradient="true"
               className="max-w-auto max-h-[180px] lg:max-w-316px "
             />
@@ -113,7 +114,7 @@ export default function ScheduleComponent() {
   ];
 
   return (
-    <div>
+    <div className="flex flex-col gap-[67px]">
       <ScheduleGrid
         title="Расписание занятий 2023-2024 учебный год"
         cards={cards}
