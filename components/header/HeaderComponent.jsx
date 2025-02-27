@@ -53,7 +53,7 @@ export default function Header() {
       }}
     >
       <div>
-        <HeaderBottomNav links={headerBottomLinks} />
+        <HeaderBottomNav links={headerLinks} />
       </div>
 
       {/* Блок для мобильных устройств (до sm) */}

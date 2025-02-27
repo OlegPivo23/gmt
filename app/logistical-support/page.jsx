@@ -53,7 +53,7 @@ export default function LogisticalSupportPage() {
             {links.map((item, i) => (
               <li key={i}>
                 <a
-                  className="font-bold text-[20px] lg:text-[48px] text-black underline decoration-0"
+                  className="font-bold text-[20px]  text-black underline decoration-0"
                   href={item.link}
                 >
                   {item.text}

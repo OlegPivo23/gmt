@@ -22,9 +22,8 @@ export default function NewsInfoComponent() {
   const [bgLoaded, setBgLoaded] = useState(false);
 
   return (
-    <div className="border-2 border-opacity-25 border-black bg-white px-4 md:px-[41px] py-6 md:py-[51px] mx-4 relative mb-6">
-      <div className="absolute top-4 md:top-[50px] right-4 md:right-[50px] flex items-center">
-        <img src="/img/news/calendar.png" alt="Календарь" />
+    <div className="border-2 rounded-[40px] border-opacity-25 border-black bg-white px-4 md:px-[41px] py-6 md:py-[51px] mx-4 relative mb-6">
+      <div className="absolute top-2 md:top-[30px] right-4 md:right-[20px] flex items-center">
         <span className="p-2 md:p-4 font-medium text-[12px] md:text-[15px] text-black">
           {news.date}
         </span>

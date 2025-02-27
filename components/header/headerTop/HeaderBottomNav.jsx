@@ -9,7 +9,12 @@ export default function HeaderBottomNav({ links }) {
   const [isLgScreen, setIsLgScreen] = useState(false);
   const menuRef = useRef(null);
 
-  const headerLinksLg = headerLinks.slice(0, 3);
+  const headerLinksLg = headerLinks.slice(0, 3); // Ссылки за пределами меню на десктопах
+
+  // Фильтруем ссылки для меню на десктопах (исключаем те, что уже отображаются за пределами меню)
+  const desktopMenuLinks = headerAllLinks.filter(
+    (link) => !headerLinksLg.some((lgLink) => lgLink.name === link.name)
+  );
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -49,7 +54,7 @@ export default function HeaderBottomNav({ links }) {
         />
 
         {/* Кнопка бургер-меню */}
-        <button className=" p-2" onClick={toggleMenu} aria-label="Открыть меню">
+        <button className="p-2" onClick={toggleMenu} aria-label="Открыть меню">
           <svg
             className="w-8 h-8"
             fill="none"
@@ -66,13 +71,13 @@ export default function HeaderBottomNav({ links }) {
             />
           </svg>
         </button>
-
-        {/* Всплывающее меню для мобильных и планшетов */}
       </div>
+
+      {/* Всплывающее меню для мобильных и планшетов */}
       {isMenuOpen && (
-        <div className="absolute z-50 top-full left-0 w-full bg-white/80 text-black shadow-lg pl-[50px] lg:pl-[233px]">
-          <ul className="grid grid-cols-1 lg:grid-cols-3 max-w-[572px] py-[27px] ">
-            {(isLgScreen ? headerLinksLg : headerAllLinks).map((item, i) => (
+        <div className="absolute z-50 top-full left-0 w-full bg-white/80 text-black shadow-lg pl-[30px] lg:pl-[233px]">
+          <ul className="grid grid-cols-1 lg:grid-cols-3 max-w-[572px] py-4 lg:py-[27px]">
+            {(isLgScreen ? desktopMenuLinks : headerAllLinks).map((item, i) => (
               <li key={i}>
                 <Link
                   href={item.link}
@@ -87,10 +92,10 @@ export default function HeaderBottomNav({ links }) {
         </div>
       )}
 
-      {/* Навигация для десктопов */}
+      {/* Навигация для десктопов (за пределами меню) */}
       <nav className="hidden lg:block">
         <ul className="flex gap-6 lg:gap-8 items-center">
-          {links.map((item, i) => (
+          {headerLinksLg.map((item, i) => (
             <li key={i}>
               <Link
                 href={item.link}

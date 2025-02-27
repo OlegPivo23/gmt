@@ -33,15 +33,12 @@ export default function OtherNewsComponent() {
   };
 
   return (
-    <div className="flex flex-col gap-[25px] px-[20px] md:px-[81px]">
-      <div className="flex flex-col items-start md:flex-row justify-between">
-        <div className="flex items-center w-full ">
-          <TitleComponent>Остальные новости</TitleComponent>
-        </div>
-        <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
+    <div className="flex flex-col gap-4 px-[20px] md:px-[81px]">
+      <div className="flex justify-center">
+        <TitleComponent>Остальные новости</TitleComponent>
       </div>
 
-      <div className="py-[43px] relative">
+      <div className=" relative">
         <Swiper
           ref={swiperRef}
           modules={[Navigation]}
@@ -69,21 +66,25 @@ export default function OtherNewsComponent() {
                   description={card.description}
                   hasGradient="true"
                   className=" w-[390px]  h-[390px]"
-                  bgImage={card.bgImage}
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
-
-        {/* Кастомные стрелки */}
-        <div onClick={handlePrev} className="pointer-events-auto z-10">
-          <NavigationArrowComponent direction="left" />
+        <div onClick={handlePrev}>
+          <NavigationArrowComponent
+            direction="left"
+            className="pointer-events-auto z-10 left-[-25px]"
+          />
         </div>
-        <div onClick={handleNext} className="pointer-events-auto z-10">
-          <NavigationArrowComponent direction="right" />
+        <div onClick={handleNext}>
+          <NavigationArrowComponent
+            direction="right"
+            className="right-[-25px] pointer-events-auto z-10"
+          />
         </div>
       </div>
+      {/* Кастомные стрелки */}
     </div>
   );
 }

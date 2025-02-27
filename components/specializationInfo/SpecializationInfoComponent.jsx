@@ -12,7 +12,7 @@ export default function SpecializationInfoPage() {
 
   return (
     <div className="border-2 border-opacity-25  p-[30px] lg:p-[70px] flex flex-col gap-[25px] mx-4">
-      <div className="flex flex-col gap-[95px]">
+      <div className="flex flex-col gap-[30px] lg:gap-[95px]">
         <CardComponent
           title={title}
           description={description}

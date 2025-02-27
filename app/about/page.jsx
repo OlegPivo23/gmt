@@ -1,11 +1,11 @@
-'use client'
+"use client";
 import { AboutTextComponent } from "@/components/about/AboutTextComponent";
 import GalaryComponent from "@/components/galary/GalaryComponent";
 import SecondaryLayout from "@/components/layouts/SecondaryLayout";
 import ShowButton from "@/components/UI/button/ShowButtonComponent";
 import TitleComponent from "@/components/UI/title/TitleComponent";
 import { useNavigationHandler } from "@/hooks/useNavigationHandler";
-import '../main.scss'
+import "../main.scss";
 
 export default function AboutPage() {
   const { navigateTo } = useNavigationHandler();
@@ -19,7 +19,7 @@ export default function AboutPage() {
           <div className="flex flex-col gap-6">
             <div className="flex justify-between items-center">
               <TitleComponent>Галерея</TitleComponent>
-              <ShowButton onClick={() => navigateTo("/galary")}>
+              <ShowButton onClick={() => navigateTo("/gallery")}>
                 Показать все
               </ShowButton>
             </div>

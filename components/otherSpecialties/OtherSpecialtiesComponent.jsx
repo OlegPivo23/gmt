@@ -127,11 +127,14 @@ export default function OtherSpecialtiesComponent() {
           </div>
         </Swiper>
 
-        <div className="absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">
+        <div className="hidden lg:block absolute top-1/2 -translate-y-1/2 left-0 right-0 flex justify-between pointer-events-none">
           <div onClick={handlePrev} className="pointer-events-auto">
             <NavigationArrowComponent direction="left" />
           </div>
-          <div onClick={handleNext} className="pointer-events-auto">
+          <div
+            onClick={handleNext}
+            className="hidden lg:block pointer-events-auto"
+          >
             <NavigationArrowComponent direction="right" />
           </div>
         </div>
