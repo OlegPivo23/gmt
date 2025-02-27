@@ -68,7 +68,7 @@ export default function OtherNewsComponent() {
                   title={card.title}
                   description={card.description}
                   hasGradient="true"
-                  className="max-w-[390px] w-full max-h-[390px]"
+                  className=" w-[390px]  h-[390px]"
                   bgImage={card.bgImage}
                 />
               </div>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
-import { headerLinks } from "@/db/headerInfo";
+import { headerLinks, headerAllLinks } from "@/db/headerInfo";
 
 export default function HeaderBottomNav({ links }) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,6 +19,21 @@ export default function HeaderBottomNav({ links }) {
   const handleLogoClick = () => {
     router.push("/");
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 1024) {
+        setIsLgScreen(true);
+      } else {
+        setIsLgScreen(false);
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div className="flex flex-col lg:flex-row lg:gap-8 lg:items-center px-4 sm:px-6 lg:px-8 py-4 relative bg-white">
@@ -52,12 +67,12 @@ export default function HeaderBottomNav({ links }) {
           </svg>
         </button>
 
-        {/* Всплывающее меню */}
+        {/* Всплывающее меню для мобильных и планшетов */}
       </div>
       {isMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white text-black shadow-lg p-4 z-50">
           <ul className="space-y-4 border-t pt-5">
-            {(isLgScreen ? headerLinksLg : headerLinks).map((item, i) => (
+            {(isLgScreen ? headerLinksLg : headerAllLinks).map((item, i) => (
               <li key={i}>
                 <Link
                   href={item.link}

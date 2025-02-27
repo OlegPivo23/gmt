@@ -16,6 +16,7 @@ import {
   headerTopLinks,
   headerBottomLinks,
   headerLinks,
+  headerAllLinks,
 } from "../../db/headerInfo";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchNews } from "@/stores/newsSlice";
@@ -80,7 +81,7 @@ export default function Header() {
       </div>
 
       {/* Блок для десктопов (начиная с sm) */}
-      <div className="hidden md:block px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px] lg:max-w-[758px] mb-12 lg:mb-[90px] relative">
+      <div className="hidden md:block px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px]  mb-12 lg:mb-[90px] relative">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -99,14 +100,14 @@ export default function Header() {
               <div
                 className={
                   index === 0
-                    ? "flex flex-col justify-end items-center h-full  fixed w-full "
+                    ? "flex flex-col justify-end items-center h-full fixed w-full translate-x-[-30px] "
                     : ""
                 }
               >
-                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl text-white text-shadow">
+                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-[758px] text-white text-shadow">
                   {slide.title}
                 </h2>
-                <p className="font-semibold text-base sm:text-lg lg:text-xl text-white text-shadow mt-4 pr-10">
+                <p className="font-semibold text-base sm:text-lg lg:text-xl lg:max-w-[758px] text-white text-shadow mt-4 pr-10">
                   {slide.description}
                 </p>
               </div>

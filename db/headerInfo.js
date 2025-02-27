@@ -75,6 +75,14 @@ export const headerLinks = [
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
 ];
+export const headerAllLinks = [
+  { name: "Абитуриентам", link: "/applicants" },
+  { name: "О техникуме", link: "/about" },
+  { name: "Студентам", link: "/students" },
+  { name: "Документы", link: "/documents" },
+  { name: "Руководство", link: "/guide" },
+  { name: "Методическая работа", link: "/methodical" },
+];
 
 export const footerLinks = [
   { name: "Документы", link: "/documents" },
