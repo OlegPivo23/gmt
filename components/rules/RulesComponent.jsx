@@ -13,7 +13,7 @@ export default function RulesComponent() {
   return (
     <section className="">
       <div className=" px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="pl-[0] lg:pl-[83] flex flex-col gap-6 md:gap-8 lg:gap-10">
+        <div className="pl-[0] lg:pl-[83px] flex flex-col gap-6 md:gap-8 lg:gap-10">
           <TitleComponent className="text-2xl sm:text-3xl lg:text-4xl">
             Правила подачи заявления:
           </TitleComponent>
