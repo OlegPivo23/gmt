@@ -2,6 +2,7 @@ import CardComponent from "@/components/cards/CardComponent";
 import MainLayout from "@/components/layouts/MainLayout";
 import TitleComponent from "@/components/UI/title/TitleComponent";
 import "../main.scss";
+import SecondaryLayout from "@/components/layouts/SecondaryLayout";
 
 const docs1 = [
   {
@@ -166,14 +167,14 @@ const docs2 = [
 export default function DocumentsPage() {
   return (
     <div className="page">
-      <MainLayout>
+      <SecondaryLayout>
         <div className="flex flex-col gap-[70px] px-[20px] px-[20] lg:px-[77px]">
           <div>
             <ul>
               <li>
                 <a
                   href=""
-                  className="font-bold text-[20px] lg:text-[48px] underline decoration-black decoration-0 text-black"
+                  className="font-bold text-[20px]  underline decoration-black decoration-0 text-black"
                 >
                   Федеральный закон от 29.12.2012 N 273-ФЗ (ред. от 02.07.2021
                   года) «Об образовании в Российской Федерации»
@@ -188,9 +189,11 @@ export default function DocumentsPage() {
                 <a href={doc.link} key={i}>
                   <CardComponent
                     hasGradient="true"
-                    className="max-w-auto max-h-[256px] lg:max-w-316px"
-                    bgImage={doc.bgImage}
+                    className="max-w-auto max-h-[256px] lg:max-w-316px rounded-[25px]"
+                    borderRadius="40px"
                     footerText={doc.text}
+                    buttonText="Перейти"
+                    docBtn="true"
                   />
                 </a>
               ))}
@@ -207,15 +210,16 @@ export default function DocumentsPage() {
               <a href={doc.link} key={i}>
                 <CardComponent
                   hasGradient="true"
-                  className="max-w-auto max-h-[256px] lg:max-w-316px"
-                  bgImage={doc.bgImage}
+                  className="max-w-auto max-h-[256px] lg:max-w-316px rounded-[25px]"
+                  borderRadius="40px"
                   footerText={doc.text}
+                  buttonText="Перейти"
                 />
               </a>
             ))}
           </div>
         </div>
-      </MainLayout>
+      </SecondaryLayout>
     </div>
   );
 }

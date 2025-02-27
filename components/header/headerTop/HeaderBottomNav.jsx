@@ -70,13 +70,13 @@ export default function HeaderBottomNav({ links }) {
         {/* Всплывающее меню для мобильных и планшетов */}
       </div>
       {isMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white text-black shadow-lg p-4 z-50">
-          <ul className="space-y-4 border-t pt-5">
+        <div className="absolute z-50 top-full left-0 w-full bg-white/80 text-black shadow-lg pl-[50px] lg:pl-[233px]">
+          <ul className="grid grid-cols-1 lg:grid-cols-3 max-w-[572px] py-[27px] ">
             {(isLgScreen ? headerLinksLg : headerAllLinks).map((item, i) => (
               <li key={i}>
                 <Link
                   href={item.link}
-                  className="block font-bold text-black text-lg hover:text-orange-500 transition-colors"
+                  className="block bt-1 font-bold text-[15px] lg:text-center hover:text-orange-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
@@ -94,7 +94,7 @@ export default function HeaderBottomNav({ links }) {
             <li key={i}>
               <Link
                 href={item.link}
-                className="font-montserrat font-extrabold text-sm lg:text-base hover:text-orange-200 transition-colors"
+                className="font-montserrat font-bold text-[15px] lg:text-base hover:text-orange-500 transition-colors"
               >
                 {item.name}
               </Link>

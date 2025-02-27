@@ -81,7 +81,7 @@ export default function Header() {
       </div>
 
       {/* Блок для десктопов (начиная с sm) */}
-      <div className="hidden md:block px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px]  mb-12 lg:mb-[90px] relative">
+      <div className="hidden md:block px-6 sm:px-8 mt-6 lg:px-12 xl:pl-[89px]  mb-10 lg:mb-[70px] relative">
         <Swiper
           modules={[Navigation, Pagination, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
@@ -100,7 +100,7 @@ export default function Header() {
               <div
                 className={
                   index === 0
-                    ? "flex flex-col justify-end items-center h-full fixed w-full translate-x-[-30px] "
+                    ? "flex flex-col justify-end items-center h-full fixed w-full translate-x-[-20px] "
                     : ""
                 }
               >
