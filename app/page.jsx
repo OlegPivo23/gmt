@@ -3,6 +3,8 @@ import MainLayout from "@/components/layouts/MainLayout";
 import NewsComponent from "@/components/news/NewsComponent";
 import SpecialtiesComponent from "@/components/specialties/SpecialtiesComponent";
 import MovieAboutComponent from "@/components/movieAbout/MovieAboutComponent";
+import MyComponent from "@/components/header/PDF";
+import TestComponent from "@/components/test/Test";
 
 export default function MainPage() {
   return (

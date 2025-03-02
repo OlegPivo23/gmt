@@ -9,9 +9,8 @@ export default function HeaderBottomNav({ links }) {
   const [isLgScreen, setIsLgScreen] = useState(false);
   const menuRef = useRef(null);
 
-  const headerLinksLg = headerLinks.slice(0, 3); // Ссылки за пределами меню на десктопах
+  const headerLinksLg = headerLinks.slice(0, 3);
 
-  // Фильтруем ссылки для меню на десктопах (исключаем те, что уже отображаются за пределами меню)
   const desktopMenuLinks = headerAllLinks.filter(
     (link) => !headerLinksLg.some((lgLink) => lgLink.name === link.name)
   );
@@ -75,13 +74,13 @@ export default function HeaderBottomNav({ links }) {
 
       {/* Всплывающее меню для мобильных и планшетов */}
       {isMenuOpen && (
-        <div className="absolute z-50 top-full left-0 w-full bg-white text-black shadow-lg pl-[30px] lg:pl-[233px]">
-          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4  max-w-[572px] py-4 lg:py-[27px]">
+        <div className="absolute z-50 top-full left-0 w-full bg-white text-black shadow-lg pl-[30px] lg:pl-[294px]">
+          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4  max-w-[419px] py-4 lg:py-[27px]">
             {(isLgScreen ? desktopMenuLinks : headerAllLinks).map((item, i) => (
               <li key={i}>
                 <Link
                   href={item.link}
-                  className="block bt-1 font-bold text-[15px] lg:text-center hover:text-orange-500 transition-colors"
+                  className="block bt-1 font-bold text-[15px] lg:text-base hover:text-orange-500 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

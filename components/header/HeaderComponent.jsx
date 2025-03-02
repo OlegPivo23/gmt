@@ -20,6 +20,8 @@ import {
 } from "../../db/headerInfo";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchNews } from "@/stores/newsSlice";
+import axios from "axios";
+import MyComponent from "./PDF";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -86,7 +88,7 @@ export default function Header() {
           modules={[Navigation, Pagination, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
+          // autoplay={{ delay: 5000, disableOnInteraction: false }}
           spaceBetween={20}
           onSlideChange={(swiper) =>
             setCurrentImageDesktop(slides[swiper.realIndex].imageUrl)
@@ -95,16 +97,17 @@ export default function Header() {
           {slides.map((slide, index) => (
             <SwiperSlide
               key={index}
-              className={index === 0 ? style.firstSlide : ""}
+              className={index === 0 ? `${style.firstSlide} relative` : ""}
             >
               <div
+                style={{ height: 210 }}
                 className={
                   index === 0
-                    ? "flex flex-col justify-end items-center h-full fixed w-full translate-x-[-20px] "
+                    ? "flex flex-col justify-end items-center h-full absolute w-full z-10   translate-x-[-10px]"
                     : ""
                 }
               >
-                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-[758px] text-white text-shadow">
+                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-[758px] text-white text-shadow ">
                   {slide.title}
                 </h2>
                 <p className="font-semibold text-base sm:text-lg lg:text-xl lg:max-w-[758px] text-white text-shadow mt-4 pr-10">

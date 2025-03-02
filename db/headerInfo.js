@@ -84,8 +84,8 @@ export const headerAllLinks = [
   { name: "Руководство", link: "/guide" },
   { name: "Методическая работа", link: "/methodical" },
   { name: "Галерея", link: "/gallery" },
-  { name: "Все специальности", link: "/all-specialties" },
-  { name: "Все новости", link: "/all-news" },
+  { name: "Специальности", link: "/all-specialties" },
+  { name: "Новости", link: "/all-news" },
   { name: "Материально-техническое обеспечение", link: "/logistical-support" },
   {
     name: "Финансово-хозяйственная деятельность",

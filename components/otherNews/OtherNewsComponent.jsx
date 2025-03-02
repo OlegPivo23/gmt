@@ -4,34 +4,42 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
-import { useRef } from "react";
-import { useRouter } from "next/navigation";
+import { useEffect, useRef } from "react";
+import { useParams } from "next/navigation";
 
 import CardComponent from "../cards/CardComponent";
 import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import TitleComponent from "../UI/title/TitleComponent";
 import { newsData } from "@/db/newsData";
 import ShowButton from "../UI/button/ShowButtonComponent";
+import { useDispatch, useSelector } from "react-redux";
+import { useRouter } from "next/navigation";
+import { fetchNews, selectNews } from "@/stores/newsSlice";
 
 export default function OtherNewsComponent() {
+  const params = useParams();
+  const id = params.id ? Number(params.id) : null;
+  const selectedNews = useSelector((state) => state.news.selectedNews);
+
   const router = useRouter();
   const swiperRef = useRef(null);
+  const { news, status, error } = useSelector((state) => state.news);
 
   const handlePrev = () => swiperRef.current?.swiper.slidePrev();
   const handleNext = () => swiperRef.current?.swiper.slideNext();
 
-  const handleShowAllClick = () => router.push("/all-news");
+  const dispatch = useDispatch();
 
   const handleCardClick = (card) => {
-    router.push(
-      `/news/${card.id}?title=${encodeURIComponent(
-        card.title
-      )}&description=${encodeURIComponent(
-        card.description
-      )}&bgImage=${encodeURIComponent(card.bgImage)}`
-    );
+    dispatch(selectNews(card));
+    router.push(`/news/${card.ID}`);
   };
-
+  useEffect(() => {
+    dispatch(fetchNews());
+  }, [dispatch]);
+  if (!selectedNews || selectedNews.ID !== id) {
+    return <p>Новость не найдена</p>;
+  }
   return (
     <div className="flex flex-col gap-4 px-[20px] md:px-[81px]">
       <div className="flex justify-center">
@@ -55,34 +63,39 @@ export default function OtherNewsComponent() {
           }}
           loop={true}
         >
-          {newsData.map((card) => (
-            <SwiperSlide key={card.id}>
+          {news.map((card) => (
+            <SwiperSlide key={card.ID}>
               <div
                 onClick={() => handleCardClick(card)}
                 className="cursor-pointer"
               >
                 <CardComponent
-                  title={card.title}
-                  description={card.description}
+                  title={card.Title}
+                  description={card.Description}
                   hasGradient="true"
+                  bgImage={
+                    card.Media && card.Media.length > 0
+                      ? `${process.env.NEXT_PUBLIC_SERVER_URL}${card.Media[0].Data}`
+                      : ""
+                  }
                   className=" w-[390px]  h-[390px]"
                 />
               </div>
             </SwiperSlide>
           ))}
+          <div onClick={handlePrev}>
+            <NavigationArrowComponent
+              direction="left"
+              className="pointer-events-auto z-10 absolute left-[-25px]"
+            />
+          </div>
+          <div onClick={handleNext}>
+            <NavigationArrowComponent
+              direction="right"
+              className=" pointer-events-auto z-10"
+            />
+          </div>
         </Swiper>
-        <div onClick={handlePrev}>
-          <NavigationArrowComponent
-            direction="left"
-            className="pointer-events-auto z-10 left-[-25px]"
-          />
-        </div>
-        <div onClick={handleNext}>
-          <NavigationArrowComponent
-            direction="right"
-            className="right-[-25px] pointer-events-auto z-10"
-          />
-        </div>
       </div>
       {/* Кастомные стрелки */}
     </div>

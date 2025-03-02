@@ -18,11 +18,15 @@ const newsSlice = createSlice({
   name: "news",
   initialState: {
     news: [],
+    selectedNews: null,
     status: "idle",
     error: null,
   },
   reducers: {
     getNews: (state) => state.news,
+    selectNews: (state, action) => {
+      state.selectedNews = action.payload;
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -40,5 +44,5 @@ const newsSlice = createSlice({
   },
 });
 
-export const { getNews } = newsSlice.actions;
+export const { getNews, selectNews } = newsSlice.actions;
 export default newsSlice.reducer;

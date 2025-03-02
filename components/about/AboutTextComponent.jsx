@@ -11,7 +11,7 @@ export function AboutTextComponent() {
   return (
     <div className="flex flex-col gap-4">
       {texts.map((item, index) => (
-        <p key={index} className="font-medium text-base text-black">
+        <p key={index} className="font-medium text-base text-justify text-black">
           {item}
         </p>
       ))}
