@@ -88,7 +88,7 @@ export default function Header() {
           modules={[Navigation, Pagination, Autoplay]}
           onSwiper={(swiper) => (swiperRef.current = swiper)}
           loop={true}
-          // autoplay={{ delay: 5000, disableOnInteraction: false }}
+          autoplay={{ delay: 5000, disableOnInteraction: false }}
           spaceBetween={20}
           onSlideChange={(swiper) =>
             setCurrentImageDesktop(slides[swiper.realIndex].imageUrl)

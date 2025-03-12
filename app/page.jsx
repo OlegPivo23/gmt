@@ -11,9 +11,9 @@ export default function MainPage() {
     <div className="page">
       <MainLayout>
         <div className="flex flex-col gap-[40px] md:gap-[50px] lg:gap-[90px] px-4 md:px-[30px] lg:px-[90px]">
-          <section>
+          {/* <section>
             <NewsComponent />
-          </section>
+          </section> */}
           <section>
             <SpecialtiesComponent />
           </section>
