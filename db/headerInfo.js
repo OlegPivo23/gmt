@@ -82,19 +82,19 @@ export const headerAllLinks = [
   { name: "Студентам", link: "/students" },
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
-  { name: "Методическая работа", link: "/methodical" },
   { name: "Галерея", link: "/gallery" },
   { name: "Специальности", link: "/all-specialties" },
   // { name: "Новости", link: "/all-news" },
-  { name: "Материально-техническое обеспечение", link: "/logistical-support" },
-  {
-    name: "Финансово-хозяйственная деятельность",
-    link: "/financial-economic-activities",
-  },
   {
     name: "Профессионалитет",
     link: "/professionalism",
   },
+  { name: "Методическая работа", link: "/methodical" },
+  {
+    name: "Финансово-хозяйственная деятельность",
+    link: "/financial-economic-activities",
+  },
+  { name: "Материально-техническое обеспечение", link: "/logistical-support" },
 ];
 
 export const footerLinks = [

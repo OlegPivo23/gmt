@@ -78,8 +78,8 @@ export default function HeaderBottomNav({ links }) {
 
       {/* Всплывающее меню для мобильных и планшетов */}
       {isMenuOpen && (
-        <div className="absolute z-50 top-full left-0 w-full bg-white text-black shadow-lg pl-[30px] lg:pl-[294px]">
-          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4  max-w-[419px] py-4 lg:py-[27px]">
+        <div className="absolute z-50 top-full left-0 w-full bg-white text-black shadow-lg pl-[30px] lg:pl-[354px]">
+          <ul className="grid grid-cols-1 lg:grid-cols-3 gap-4  max-w-[500px] py-4 lg:py-[27px] items-center">
             {(isLgScreen ? desktopMenuLinks : headerAllLinks).map((item, i) => (
               <li key={i}>
                 <Link
