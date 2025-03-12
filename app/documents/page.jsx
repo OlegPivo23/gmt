@@ -3,6 +3,7 @@ import MainLayout from "@/components/layouts/MainLayout";
 import TitleComponent from "@/components/UI/title/TitleComponent";
 import "../main.scss";
 import SecondaryLayout from "@/components/layouts/SecondaryLayout";
+import DocumentsMenuComponent from "@/components/documentsMenu/DocumentsMenuComponent";
 
 const docs1 = [
   {
@@ -168,8 +169,9 @@ export default function DocumentsPage() {
   return (
     <div className="page">
       <SecondaryLayout>
+        <DocumentsMenuComponent />
         <div className="flex flex-col gap-[70px] px-[20px] px-[20] lg:px-[77px]">
-          <div>
+          {/* <div>
             <ul>
               <li>
                 <a
@@ -181,7 +183,7 @@ export default function DocumentsPage() {
                 </a>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div>
             <TitleComponent>Приказ о зачислении</TitleComponent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-[34px]">

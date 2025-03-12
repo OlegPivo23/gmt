@@ -103,11 +103,11 @@ export default function Header() {
                 style={{ height: 210 }}
                 className={
                   index === 0
-                    ? "flex flex-col justify-end items-center h-full absolute w-full z-10   translate-x-[-10px]"
+                    ? "flex flex-col justify-end items-center h-full absolute w-full z-10 translate-x-[-10px]"
                     : ""
                 }
               >
-                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-[758px] text-white text-shadow ">
+                <h2 className="font-extrabold text-2xl sm:text-3xl lg:text-4xl lg:max-w-[758px] translate-y-[10px] text-white text-shadow ">
                   {slide.title}
                 </h2>
                 <p className="font-semibold text-base sm:text-lg lg:text-xl lg:max-w-[758px] text-white text-shadow mt-4 pr-10">

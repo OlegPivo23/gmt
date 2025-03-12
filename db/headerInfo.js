@@ -91,6 +91,10 @@ export const headerAllLinks = [
     name: "Финансово-хозяйственная деятельность",
     link: "/financial-economic-activities",
   },
+  {
+    name: "Профессионалитет",
+    link: "/professionalism",
+  },
 ];
 
 export const footerLinks = [

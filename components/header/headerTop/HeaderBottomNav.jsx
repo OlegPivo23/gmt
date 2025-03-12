@@ -43,6 +43,10 @@ export default function HeaderBottomNav({ links }) {
     <div className="flex flex-col lg:flex-row lg:gap-8 lg:items-center px-4 sm:px-6 lg:px-8 py-4 relative bg-white">
       <div className="flex gap-6 lg:gap-8 ml-5 lg:ml-[87px] items-center lg:items-center relative">
         {/* Логотип */}
+        <div>
+          <p className="font-bold text-[15px] translate-x-[20px]">ВГМТ</p>
+        </div>
+
         <Image
           src="/img/header/logo.png"
           alt="Логотип"
