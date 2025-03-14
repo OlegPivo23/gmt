@@ -25,6 +25,10 @@ export default function SecondaryLayout({ children }) {
       name: "Финансово-хозяйственная деятельность",
       link: "/financial-economic-activities",
     },
+    {
+      name: "Образование",
+      link: "/education",
+    },
   ];
   const pageDescriptions = {
     "/applicants": "Абитуриентам - бакалавриата",
@@ -36,6 +40,7 @@ export default function SecondaryLayout({ children }) {
     "/documents": "Студентам",
     "/logistical-support": "О техникуме",
     "/financial-economic-activities": "О техникуме",
+    "/education": "",
   };
   const currentDescription = pageDescriptions[pathname];
   return (
