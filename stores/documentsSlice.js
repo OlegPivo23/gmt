@@ -3,12 +3,13 @@ import {
   fetchAllDocuments,
   fetchDocumentFiles,
   fetchDocumentsDirection,
-} from "./documentThunks";
+} from "./documentsThunks";
 
 const initialState = {
   allDocuments: [],
   documentFiles: [],
   documentsDirection: [],
+  currentDirectionDocuments: [],
   status: "idle",
   error: null,
 };
@@ -16,9 +17,7 @@ const initialState = {
 const documentsSlice = createSlice({
   name: "documents",
   initialState,
-  reducers: {
-    
-  },
+  reducers: {},
   extraReducers: (builder) => {
     builder
       // Обработка состояний для получения всех документов
@@ -28,6 +27,14 @@ const documentsSlice = createSlice({
       .addCase(fetchAllDocuments.fulfilled, (state, action) => {
         state.status = "succeeded";
         state.allDocuments = action.payload;
+
+        // Извлекаем направления для отображения и запроса
+        if (state.allDocuments.length > 0) {
+          state.documentsDirection = state.allDocuments.map((doc) => ({
+            directions_ru: doc.directions_ru,
+            directions_en: doc.directions_en,
+          }));
+        }
       })
       .addCase(fetchAllDocuments.rejected, (state, action) => {
         state.status = "failed";
@@ -53,8 +60,9 @@ const documentsSlice = createSlice({
       })
       .addCase(fetchDocumentsDirection.fulfilled, (state, action) => {
         state.status = "succeeded";
-        state.documentsDirection = action.payload;
+        state.currentDirectionDocuments = action.payload;
       })
+
       .addCase(fetchDocumentsDirection.rejected, (state, action) => {
         state.status = "failed";
         state.error = action.payload;

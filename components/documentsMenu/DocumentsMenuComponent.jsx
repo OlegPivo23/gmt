@@ -1,36 +1,40 @@
 "use client";
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchDocumentsDirection } from "@/stores/documentsThunks";
+import {
+  fetchAllDocuments,
+  fetchDocumentsDirection,
+} from "@/stores/documentsThunks";
 import "./documentsMenu.scss";
 
 export default function DocumentsMenuComponent() {
   const dispatch = useDispatch();
-
-  const { documentsDirection, status, error } = useSelector(
-    (state) => state.documents
-  );
+  const { documentsDirection, currentDirectionDocuments, status, error } =
+    useSelector((state) => state.documents);
 
   useEffect(() => {
-    dispatch(fetchDocumentsDirection("direction_en"));
+    dispatch(fetchAllDocuments());
   }, [dispatch]);
 
-  const documentsLinks = [
-    "Основные документы",
-    "ФПП",
-    "Фин-Хоз деятельность",
-    "Мат-Тех обеспечение",
-    "Метод. работа",
-    "Центр содействия трудоустройствавыпускников",
-    "Атлас доступных профессий",
-  ];
+  const handleDirectionClick = (direction_en) => {
+    dispatch(fetchDocumentsDirection(direction_en));
+  };
+
+  useEffect(() => {
+    console.log("Updated doc files:", currentDirectionDocuments);
+  }, [currentDirectionDocuments]);
+
   return (
     <div>
-      <div className=" doc-wrapper">
+      <div className="doc-wrapper">
         <ul className="doc-menu">
-          {documentsLinks.map((item, idx) => (
-            <li key={idx} className="doc-item active">
-              {item.directions_en}
+          {documentsDirection.map((item, idx) => (
+            <li
+              key={idx}
+              onClick={() => handleDirectionClick(item.directions_en)}
+              className="doc-item active"
+            >
+              {item.directions_ru}
             </li>
           ))}
         </ul>

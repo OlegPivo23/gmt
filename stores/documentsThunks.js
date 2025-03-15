@@ -1,9 +1,9 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
 import {
+  getAllDocumentsService,
   getDocumentFileService,
   getDocumentsDirectionService,
-  getAllDocumentsService,
-} from "../services/fileService.js";
+} from "@/services/fileService";
+import { createAsyncThunk } from "@reduxjs/toolkit";
 
 // Асинхронное действие для получения всех документов
 export const fetchAllDocuments = createAsyncThunk(
@@ -24,7 +24,7 @@ export const fetchDocumentFiles = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const res = await getDocumentFileService();
-      return res;
+      return res.data;
     } catch (err) {
       return rejectWithValue(err.response?.data || err.message);
     }

@@ -1,10 +1,11 @@
+"use client";
 import CardComponent from "@/components/cards/CardComponent";
 import MainLayout from "@/components/layouts/MainLayout";
 import TitleComponent from "@/components/UI/title/TitleComponent";
 import "../main.scss";
 import SecondaryLayout from "@/components/layouts/SecondaryLayout";
 import DocumentsMenuComponent from "@/components/documentsMenu/DocumentsMenuComponent";
-
+import { useSelector } from "react-redux";
 const docs1 = [
   {
     text: "Устав",
@@ -166,24 +167,36 @@ const docs2 = [
 ];
 
 export default function DocumentsPage() {
+  const { currentDirectionDocuments, status, error } = useSelector(
+    (state) => state.documents
+  );
+
   return (
     <div className="page">
       <SecondaryLayout>
         <DocumentsMenuComponent />
         <div className="flex flex-col gap-[70px] px-[20px] px-[20] lg:px-[77px]">
-          {/* <div>
-            <ul>
-              <li>
+          <div className="documents-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {currentDirectionDocuments &&
+            currentDirectionDocuments.length > 0 ? (
+              currentDirectionDocuments.map((item) => (
                 <a
-                  href=""
-                  className="font-bold text-[20px]  underline decoration-black decoration-0 text-black"
+                  href={`${process.env.NEXT_PUBLIC_SERVER_URL}${item.data}`}
+                  target="_blank"
+                  key={item.id}
                 >
-                  Федеральный закон от 29.12.2012 N 273-ФЗ (ред. от 02.07.2021
-                  года) «Об образовании в Российской Федерации»
+                  <CardComponent
+                    footerText={item.name}
+                    hasGradient={true}
+                    borderRadius="30px"
+                    docBtn={true}
+                  />
                 </a>
-              </li>
-            </ul>
-          </div> */}
+              ))
+            ) : (
+              <div>Нет документов для отображения</div>
+            )}
+          </div>
           <div>
             <TitleComponent>Приказ о зачислении</TitleComponent>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-[34px]">

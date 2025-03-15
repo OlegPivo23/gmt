@@ -10,12 +10,12 @@ import ContactsComponent from "@/components/contacts/ContactsComponent";
 
 export default function ProfessionalismPage() {
   return (
-    <div className="page">
+    <div className="max-w-[1200px] mx-auto rounded-[25px] bg-white flex flex-col ">
       <div>
         <HeaderBottomNav />
         <ProfessionalismBanner />
       </div>
-      <div className="bg-white px-5 md:px-[40px] lg:px-[90px] flex flex-col gap-5">
+      <div className="bg-white px-5 md:px-[40px] lg:px-[90px] flex flex-col gap-4 gap-y-6 mb-6">
         <CareerCardComponent />
         <ProfessionalismDocsComponent />
       </div>
