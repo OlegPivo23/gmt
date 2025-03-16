@@ -9,11 +9,17 @@
     "card8 card9"
     "card10 card10"
     "card11 card12"
-    "card13 card13";
+    "card13 card13"
+    "card14 card15"
+    "card17 card17"
+    "card18 card19"
+    "card20 card20";
   grid-template-columns: 1fr 1fr;
   gap: 16px;
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+  .specialties-grid {
     grid-template-areas:
       "card1"
       "card2"
@@ -27,31 +33,36 @@
       "card10"
       "card11"
       "card12"
-      "card13";
+      "card13"
+      "card14"
+      "card15"
+      "card17"
+      "card18"
+      "card19"
+      "card20";
     grid-template-columns: 1fr;
   }
+}
+
+.specialties-grid > * {
+  grid-area: unset; /* Сброс grid-area для всех элементов */
 }
 
 .specialties-grid > *:nth-child(1) {
   grid-area: card1;
 }
-
 .specialties-grid > *:nth-child(2) {
   grid-area: card2;
 }
-
 .specialties-grid > *:nth-child(3) {
   grid-area: card3;
 }
-
 .specialties-grid > *:nth-child(4) {
   grid-area: card4;
 }
-
 .specialties-grid > *:nth-child(5) {
   grid-area: card5;
 }
-
 .specialties-grid > *:nth-child(6) {
   grid-area: card6;
 }
@@ -75,4 +86,23 @@
 }
 .specialties-grid > *:nth-child(13) {
   grid-area: card13;
+}
+.specialties-grid > *:nth-child(14) {
+  grid-area: card14;
+}
+.specialties-grid > *:nth-child(15) {
+  grid-area: card15;
+}
+
+.specialties-grid > *:nth-child(16) {
+  grid-area: card17;
+}
+.specialties-grid > *:nth-child(17) {
+  grid-area: card18;
+}
+.specialties-grid > *:nth-child(18) {
+  grid-area: card19;
+}
+.specialties-grid > *:nth-child(19) {
+  grid-area: card20;
 }

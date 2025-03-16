@@ -3,44 +3,7 @@ import { useRouter } from "next/navigation";
 import CardComponent from "../cards/CardComponent";
 import ShowButton from "../UI/button/ShowButtonComponent";
 import TitleComponent from "../UI/title/TitleComponent";
-
-const specialities = [
-  {
-    id: 1,
-    title: "Туризм и гостеприимство",
-    description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img1.webp",
-    buttonText: "Подробнее",
-  },
-  {
-    id: 2,
-    title: "Экономика и бухгалтерский учет (по отраслям)",
-    description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img5.webp",
-    buttonText: "Подробнее",
-  },
-  {
-    id: 3,
-    title: "Земельно-имущественные отношения​.",
-    description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img4.webp",
-    buttonText: "Подробнее",
-  },
-  {
-    id: 4,
-    title: "Оператор информационных систем и ресурсов ",
-    description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img3.webp",
-    buttonText: "Подробнее",
-  },
-  {
-    id: 5,
-    title: "Защита в чрезвычайных ситуациях",
-    description: "Описание специальности",
-    bgImage: "/img/specialities/bg-img2.webp",
-    buttonText: "Подробнее",
-  },
-];
+import { specialities } from "@/db/specializationData";
 
 export default function SpecialtiesComponent() {
   const router = useRouter();
@@ -67,23 +30,25 @@ export default function SpecialtiesComponent() {
         <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
       <div className="flex flex-col gap-[35px]">
-        {specialities.map((item) => (
-          <div
-            key={item.id}
-            onClick={() => handleCardClick(item)}
-            className="cursor-pointer"
-          >
-            <CardComponent
-              title={item.title}
-              description={item.description}
-              bgImage={item.bgImage}
-              borderRadius="30px"
-              className="max-h-[220px]"
-              buttonText={item.buttonText}
-              hasGradient="true"
-            />
-          </div>
-        ))}
+        {specialities
+          .map((item) => (
+            <div
+              key={item.id}
+              onClick={() => handleCardClick(item)}
+              className="cursor-pointer"
+            >
+              <CardComponent
+                title={item.title}
+                description={item.description}
+                bgImage={item.bgImage}
+                borderRadius="30px"
+                className="max-h-[220px]"
+                buttonText={item.buttonText}
+                hasGradient="true"
+              />
+            </div>
+          ))
+          .splice(0, 5)}
       </div>
     </div>
   );
