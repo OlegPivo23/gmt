@@ -26,20 +26,41 @@ export default function NewsGrid({
           />
         ))}
       </div>
+
+      {/* Исправленный блок для largeNews */}
       {largeNews && (
         <div className="h-full" style={{ order: reverse ? -1 : 1 }}>
-          <NewsItemLarge
-            key={news.id}
-            id={news.id}
-            title={news.title}
-            description={news.description}
-            media={news.media}
-            content={news.content}
-            createdAt={news.createdAt}
-            published={news.published}
-            updatedAt={news.updatedAt}
-            onCardClick={onCardClick}
-          />
+          {Array.isArray(largeNews) ? (
+            // Если largeNews — это массив
+            largeNews.map((news) => (
+              <NewsItemLarge
+                key={news.id}
+                id={news.id}
+                title={news.title}
+                description={news.description}
+                media={news.media}
+                content={news.content}
+                createdAt={news.createdAt}
+                published={news.published}
+                updatedAt={news.updatedAt}
+                onCardClick={onCardClick}
+              />
+            ))
+          ) : (
+            // Если largeNews — это объект
+            <NewsItemLarge
+              key={largeNews.id}
+              id={largeNews.id}
+              title={largeNews.title}
+              description={largeNews.description}
+              media={largeNews.media}
+              content={largeNews.content}
+              createdAt={largeNews.createdAt}
+              published={largeNews.published}
+              updatedAt={largeNews.updatedAt}
+              onCardClick={onCardClick}
+            />
+          )}
         </div>
       )}
     </div>

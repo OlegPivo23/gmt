@@ -6,6 +6,8 @@ import "../main.scss";
 import SecondaryLayout from "@/components/layouts/SecondaryLayout";
 import DocumentsMenuComponent from "@/components/documentsMenu/DocumentsMenuComponent";
 import { useSelector } from "react-redux";
+
+
 const docs1 = [
   {
     text: "Устав",
