@@ -6,6 +6,7 @@ import SpecialtiesComponent from "@/components/specialties/SpecialtiesComponent"
 import MovieAboutComponent from "@/components/movieAbout/MovieAboutComponent";
 import { useNavigation } from "@/hooks/useNavigation";
 import NewsComponent from "@/components/news/NewsComponent";
+import ProfessionalismBtnComponent from "@/components/professionalismGroup/ProfessionalismBtnComponent";
 
 export default function MainPage() {
   const navigateTo = useNavigation();
@@ -23,15 +24,9 @@ export default function MainPage() {
           <section>
             <MovieAboutComponent />
           </section>
-          <div
-            className="cursor-pointer"
-            onClick={() => navigateTo("/professionalism")}
-          >
-            <img
-              src="/img/professionalism/specialitet.png"
-              alt="Профессионалитет"
-            />
-          </div>
+          <section>
+            <ProfessionalismBtnComponent />
+          </section>
         </div>
       </MainLayout>
     </div>
