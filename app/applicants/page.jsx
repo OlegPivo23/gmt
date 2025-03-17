@@ -112,9 +112,44 @@ export default function ApplicantsPage() {
         <section>
           <DocumentsListComponent />
         </section>
-        <section>
+        {/* <section>
           <DocumentForm />
-        </section>
+        </section> */}
+        <div className="mx-auto px-5 lg:px-[83px] flex flex-col gap-4">
+          <p className="font-bold text-[20px] underline decoration-transparent">
+            Поступающие вправе направить заявление о приеме, а также необходимые
+            документы одним из следующих способов:
+          </p>
+          <ul className="list-disc pl-5">
+            <li>
+              <p className="font-bold text-[20px] underline decoration-transparent">
+                лично в образовательную организацию через операторов почтовой
+                связи общего пользования заказным письмом с уведомлением о
+                вручении.
+              </p>
+            </li>
+          </ul>
+          <p className="font-bold text-[20px] underline decoration-transparent">
+            Документы направляются/предоставляются в приёмную комиссию по
+            адресу:
+          </p>
+          <p className="font-bold text-[20px] underline decoration-transparent">
+            362003 РСО-Алания, г. Владикавказ, ул. пр. Коста,195:
+          </p>
+          <ul className="list-disc pl-5">
+            <li>
+              <p className="font-bold text-[20px] underline decoration-transparent">
+                в электронной форме посредством электронной почты
+                (vodnpt@mail.ru) в соответствии с Федеральным законом от 6
+                апреля 2011 г. № 63-ФЗ «Об электронной подписи», Федеральным
+                законом от 27 июля 2006 г. № 149-ФЗ «Об информации,
+                информационных технологиях и о защите информации», Федеральным
+                законом от 7 июля 2003 г. № 126-ФЗ «О связи»;
+              </p>
+            </li>
+          </ul>
+        </div>
+
         <section className="px-5">
           <ProfessionalismBtnComponent />
         </section>
