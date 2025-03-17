@@ -27,11 +27,9 @@ export default function NewsGrid({
         ))}
       </div>
 
-      {/* Исправленный блок для largeNews */}
       {largeNews && (
         <div className="h-full" style={{ order: reverse ? -1 : 1 }}>
           {Array.isArray(largeNews) ? (
-            // Если largeNews — это массив
             largeNews.map((news) => (
               <NewsItemLarge
                 key={news.id}
@@ -47,7 +45,6 @@ export default function NewsGrid({
               />
             ))
           ) : (
-            // Если largeNews — это объект
             <NewsItemLarge
               key={largeNews.id}
               id={largeNews.id}

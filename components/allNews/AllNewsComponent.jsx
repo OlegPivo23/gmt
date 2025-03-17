@@ -32,7 +32,7 @@ export default function AllNewsComponent() {
         updatedAt: item.UpdatedAt,
       };
 
-      if (item.Description.length < 10) {
+      if (item.ID % 2 === 0) {
         largeNews.push(newsItem);
       } else {
         smallNews.push(newsItem);

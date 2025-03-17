@@ -9,7 +9,6 @@ export default function NewsItemLarge({
   updatedAt,
   onCardClick,
 }) {
-  // Получаем URL фонового изображения
   const bgImage =
     media && media.length > 0
       ? `${process.env.NEXT_PUBLIC_SERVER_URL}${media[0].Data}`
@@ -31,15 +30,12 @@ export default function NewsItemLarge({
         })
       }
       style={{
-        backgroundImage: bgImage ? `url(${bgImage})` : "none", // Фоновое изображение
-        backgroundSize: "cover", // Растягиваем изображение на весь блок
-        backgroundPosition: "center", // Центрируем изображение
+        backgroundImage: bgImage ? `url(${bgImage})` : "none",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
     >
-      {/* Заголовок новости */}
       <h2 className="news-title">{title}</h2>
-
-      {/* Описание новости */}
       <p className="news-description">{description}</p>
     </div>
   );
