@@ -196,7 +196,7 @@ export default function DocumentsPage() {
                 </a>
               ))
             ) : (
-              <div>Нет документов для отображения</div>
+              <div>Выберите категорию документов</div>
             )}
           </div>
           <div>

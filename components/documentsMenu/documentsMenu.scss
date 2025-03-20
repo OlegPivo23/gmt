@@ -1,9 +1,16 @@
 .doc-wrapper {
   background: #ffad5b;
-  padding: 10px 52px;
+  padding: 10px 20px;
   margin-top: -90px;
   box-sizing: border-box;
+
+  @media (max-width: 991px) {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 20px 10px 20px;
+  }
 }
+
 .doc-menu {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
@@ -12,6 +19,12 @@
   gap: 29px;
   position: relative;
   cursor: pointer;
+
+  @media (max-width: 991px) {
+    justify-content: start;
+    width: max-content;
+    padding-right: 20px;
+  }
 
   &.active {
     border-radius: 36px;
@@ -32,10 +45,14 @@
     content: "";
     width: 1px;
     height: 21px;
-    background-color: black;
+    background-color: white;
     position: absolute;
     right: -14.5px;
     top: 50%;
     transform: translateY(-50%);
+  }
+
+  &:last-child::after {
+    display: none;
   }
 }
