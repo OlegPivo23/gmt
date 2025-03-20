@@ -10,6 +10,10 @@ export default function MovieAboutComponent() {
     ? "https://www.youtube.com/embed/o1AJV90p22U?autoplay=1&mute=1"
     : "";
 
+  // URL превью из YouTube
+  const thumbnailUrl =
+    "https://img.youtube.com/vi/o1AJV90p22U/maxresdefault.jpg";
+
   return (
     <div className="flex flex-col gap-[25px]">
       <TitleComponent>Фильм о нас</TitleComponent>
@@ -24,17 +28,27 @@ export default function MovieAboutComponent() {
               allowFullScreen
             />
           ) : (
-            <div
-              className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
-              onClick={() => setShowVideo(true)}
-            >
-              <Image
-                src="/icons/movieAbout/play.svg"
-                alt="Play"
-                width={80}
-                height={80}
+            <>
+              {/* Превью из YouTube */}
+              <img
+                src="/img/movie/maxresdefault.jpg"
+                alt="Превью видео"
+                className="absolute inset-0 w-full h-full object-cover"
+                crossOrigin="anonymous"
               />
-            </div>
+              {/* Кнопка Play */}
+              <div
+                className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+                onClick={() => setShowVideo(true)}
+              >
+                <Image
+                  src="/icons/movieAbout/play.svg"
+                  alt="Play"
+                  width={80}
+                  height={80}
+                />
+              </div>
+            </>
           )}
         </div>
       </div>

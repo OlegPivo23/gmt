@@ -14,7 +14,7 @@ export default function SecondaryLayout({ children }) {
     { name: "Руководство техникума", link: "/guide" },
     { name: "О техникуме", link: "/about" },
     { name: "Студентам", link: "/students" },
-    { name: "Методическая работа", link: "/methodical" },
+    // { name: "Методическая работа", link: "/methodical" },
     { name: "Галерея", link: "/gallery" }, // Исправлено /galary → /gallery
     { name: "Документы", link: "/documents" },
     {
@@ -34,7 +34,7 @@ export default function SecondaryLayout({ children }) {
     "/applicants": "Абитуриентам - бакалавриата",
     "/about": "О техникуме - информация о нашем учебном заведении",
     "/students": "Студентам - полезная информация для студентов",
-    "/methodical": "Методическая работа - материалы для преподавателей",
+    // "/methodical": "Методическая работа - материалы для преподавателей",
     "/guide": "Педагогический состав",
     "/gallery": "О техникуме",
     "/documents": "Студентам",

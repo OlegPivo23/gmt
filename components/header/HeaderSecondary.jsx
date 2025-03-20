@@ -8,7 +8,7 @@ const headerLinks = [
   { name: "Руководство техникума", link: "/guide" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
-  { name: "Методическая работа", link: "/methodical" },
+  // { name: "Методическая работа", link: "/methodical" },
   { name: "Галерея", link: "/gallery" }, // Исправлено /galary → /gallery
   { name: "Документы", link: "/documents" },
   { name: "Материально-техническое обеспечение", link: "/logistical-support" },

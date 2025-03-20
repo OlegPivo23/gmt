@@ -32,6 +32,7 @@ export default function FinancialEconomicActivities() {
               <CardComponent
                 key={card.id}
                 bgImage={card.bgImage}
+                borderRadius="30px"
                 maxWidth="458px"
                 maxHeight="322px"
                 width="100%"

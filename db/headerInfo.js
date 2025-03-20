@@ -61,13 +61,13 @@ export const headerTopLinks = [
   { name: "Абитуриентам", link: "/applicants" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
-  { name: "Методическая работа", link: "/methodical" },
+  // { name: "Методическая работа", link: "/methodical" },
 ];
 
 export const headerBottomLinks = [
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
-  { name: "Методическая работа", link: "/methodical" },
+  // { name: "Методическая работа", link: "/methodical" },
 ];
 
 export const headerLinks = [
@@ -94,7 +94,7 @@ export const headerAllLinks = [
     name: "Образование",
     link: "/education",
   },
-  { name: "Методическая работа", link: "/methodical" },
+  // { name: "Методическая работа", link: "/methodical" },
   {
     name: "Финансово-хозяйственная деятельность",
     link: "/financial-economic-activities",
@@ -105,7 +105,7 @@ export const headerAllLinks = [
 export const footerLinks = [
   { name: "Документы", link: "/documents" },
   { name: "Руководство", link: "/guide" },
-  { name: "Методическая работа", link: "/methodical" },
+  // { name: "Методическая работа", link: "/methodical" },
   { name: "Абитуриентам", link: "/applicants" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
