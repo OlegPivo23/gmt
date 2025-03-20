@@ -6,7 +6,9 @@ import TitleComponent from "@/components/UI/title/TitleComponent";
 import { useSelector } from "react-redux";
 
 export default function DocumentsPage() {
-  const { currentDirectionDocuments } = useSelector((state) => state.documents);
+  const { currentDirectionDocuments, status, error } = useSelector(
+    (state) => state.documents
+  );
 
   const groupedDocuments = currentDirectionDocuments?.reduce((acc, doc) => {
     if (!acc[doc.title]) {
@@ -21,7 +23,15 @@ export default function DocumentsPage() {
       <SecondaryLayout>
         <DocumentsMenuComponent />
         <div className="flex flex-col gap-[70px] px-[20px] lg:px-[77px]">
-          {groupedDocuments && Object.keys(groupedDocuments).length > 0 ? (
+          {status === "loading" ? (
+            <div className="text-center text-gray-500 py-4">
+              Загрузка документов...
+            </div>
+          ) : error ? (
+            <div className="text-center text-red-500 py-4">
+              Ошибка загрузки документов
+            </div>
+          ) : groupedDocuments && Object.keys(groupedDocuments).length > 0 ? (
             Object.entries(groupedDocuments).map(([title, docs]) => (
               <div key={title} className="mb-10">
                 <TitleComponent>{title}</TitleComponent>
@@ -37,6 +47,7 @@ export default function DocumentsPage() {
                         footerText={doc.name}
                         hasGradient={true}
                         borderRadius="30px"
+                        className="max-w-[434px] max-h-[246px]"
                         docBtn={true}
                       />
                     </a>
