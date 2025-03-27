@@ -21,7 +21,7 @@ export default function DocumentsPage() {
   return (
     <div className="page">
       <SecondaryLayout>
-        <DocumentsMenuComponent />
+        {/* <DocumentsMenuComponent /> */}
         <div className="flex flex-col gap-[70px] px-[20px] lg:px-[77px]">
           {status === "loading" ? (
             <div className="text-center text-gray-500 py-4">

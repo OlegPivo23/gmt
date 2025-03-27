@@ -15,7 +15,7 @@ export default function CardComponent({
 }) {
   return (
     <div
-      className={`box-border object-cover aspect-[1/1] cursor-pointer relative ${className}`}
+      className={`box-border object-cover aspect-[1/1] cursor-pointer relative ${className} shadow-md hover:shadow-lg transition-shadow duration-300`}
       style={{
         backgroundImage: hasGradient
           ? `linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 173, 91, 0.67) 100%), url(${bgImage})`
@@ -31,7 +31,7 @@ export default function CardComponent({
     >
       {/* Кнопка docBtn в правом верхнем углу */}
       {docBtn && (
-        <button className="absolute top-4 right-4 p-2  font-bold text-[19px] underline decoration-skip-ink text-[#272727] [text-shadow:0_0_16px_0_rgba(255,255,255,0.71)]">
+        <button className="absolute top-4 right-4 p-2 font-bold text-[19px] underline decoration-skip-ink text-[#272727] [text-shadow:0_0_16px_0_rgba(255,255,255,0.71)]">
           Перейти
         </button>
       )}

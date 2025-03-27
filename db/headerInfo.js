@@ -76,6 +76,50 @@ export const headerLinks = [
   { name: "Студентам", link: "/students" },
   { name: "Галерея", link: "/gallery" },
   { name: "Образование", link: "/education" },
+  {
+    name: "Вакантные места для приема (перевода) учащихся",
+    link: "/vacant-places",
+  },
+  {
+    name: "Международное сотрудничество",
+    link: "/international-cooperation",
+  },
+  {
+    name: "Структура и органы управления образовательной организацией",
+    link: "/structure-and-organs",
+  },
+  {
+    name: "Цех по производству пластиковых окон",
+    link: "/production-workshop",
+  },
+  {
+    name: "Центр содействия трудоустройству выпускников",
+    link: "/employment-promotion",
+  },
+  {
+    name: "Центр практической подготовки «Диагност Авто»",
+    link: "/training-center",
+  },
+  {
+    name: "Студенческий отряд",
+    link: "/student-groups",
+  },
+  {
+    name: "Учебно-производственный комплекс (УПК) ",
+    link: "/complex",
+  },
+  {
+    name: "Автошкола ",
+    link: "/driving-school",
+  },
+  {
+    name: "Платные образовательные услуги",
+    link: "/paid-educational-services",
+  },
+  {
+    name: "Общие сведения",
+    link: "/general-information",
+  },
 ];
 export const headerAllLinks = [
   { name: "Абитуриентам", link: "/applicants" },
@@ -100,6 +144,50 @@ export const headerAllLinks = [
     link: "/financial-economic-activities",
   },
   { name: "Материально-техническое обеспечение", link: "/logistical-support" },
+  {
+    name: "Вакантные места для приема (перевода) учащихся",
+    link: "/vacant-places",
+  },
+  {
+    name: "Международное сотрудничество",
+    link: "/international-cooperation",
+  },
+  {
+    name: "Структура и органы управления образовательной организацией",
+    link: "/structure-and-organs",
+  },
+  {
+    name: "Цех по производству пластиковых окон",
+    link: "/production-workshop",
+  },
+  {
+    name: "Центр содействия трудоустройству выпускников",
+    link: "/employment-promotion",
+  },
+  {
+    name: "Центр практической подготовки «Диагност Авто»",
+    link: "/training-center",
+  },
+  {
+    name: "Студенческий отряд",
+    link: "/student-groups",
+  },
+  {
+    name: "Учебно-производственный комплекс (УПК) ",
+    link: "/complex",
+  },
+  {
+    name: "Автошкола ",
+    link: "/driving-school",
+  },
+  {
+    name: "Платные образовательные услуги",
+    link: "/paid-educational-services",
+  },
+  {
+    name: "Общие сведения",
+    link: "/general-information",
+  },
 ];
 
 export const footerLinks = [

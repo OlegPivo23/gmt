@@ -9,27 +9,27 @@ import style from "../header/header.module.scss";
 
 export default function SecondaryLayout({ children }) {
   const pathname = usePathname();
-  const headerLinks = [
-    { name: "Абитуриентам", link: "/applicants" },
-    { name: "Руководство техникума", link: "/guide" },
-    { name: "О техникуме", link: "/about" },
-    { name: "Студентам", link: "/students" },
-    // { name: "Методическая работа", link: "/methodical" },
-    { name: "Галерея", link: "/gallery" }, // Исправлено /galary → /gallery
-    { name: "Документы", link: "/documents" },
-    {
-      name: "Материально-техническое обеспечение",
-      link: "/logistical-support",
-    },
-    {
-      name: "Финансово-хозяйственная деятельность",
-      link: "/financial-economic-activities",
-    },
-    {
-      name: "Образование",
-      link: "/education",
-    },
-  ];
+  // const headerLinks = [
+  //   { name: "Абитуриентам", link: "/applicants" },
+  //   { name: "Руководство техникума", link: "/guide" },
+  //   { name: "О техникуме", link: "/about" },
+  //   { name: "Студентам", link: "/students" },
+  //   // { name: "Методическая работа", link: "/methodical" },
+  //   { name: "Галерея", link: "/gallery" }, // Исправлено /galary → /gallery
+  //   { name: "Документы", link: "/documents" },
+  //   {
+  //     name: "Материально-техническое обеспечение",
+  //     link: "/logistical-support",
+  //   },
+  //   {
+  //     name: "Финансово-хозяйственная деятельность",
+  //     link: "/financial-economic-activities",
+  //   },
+  //   {
+  //     name: "Образование",
+  //     link: "/education",
+  //   },
+  // ];
   const pageDescriptions = {
     "/applicants": "Абитуриентам - бакалавриата",
     "/about": "О техникуме - информация о нашем учебном заведении",
