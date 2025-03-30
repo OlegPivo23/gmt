@@ -2,26 +2,14 @@
 import React, { useState, useRef, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import HeaderTopNav from "./headerTop/HeaderTopNav";
 import style from "./header.module.scss";
-import NavigationArrowComponent from "../UI/navigationArrow/NavigationArrowComponent";
 import HeaderBottomNav from "./headerTop/HeaderBottomNav";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import {
-  slides,
-  slidesMobile,
-  headerTopLinks,
-  headerBottomLinks,
-  headerLinks,
-  headerAllLinks,
-} from "../../db/headerInfo";
+import { slides, slidesMobile, headerLinks } from "../../db/headerInfo";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchNews } from "@/stores/newsSlice";
-import axios from "axios";
-import MyComponent from "./PDF";
 
 export default function Header() {
   const dispatch = useDispatch();

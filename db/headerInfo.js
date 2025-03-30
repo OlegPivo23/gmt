@@ -72,6 +72,7 @@ export const headerBottomLinks = [
 
 export const headerLinks = [
   { name: "Абитуриентам", link: "/applicants" },
+  { name: "Руководство", link: "/guide" },
   { name: "О техникуме", link: "/about" },
   { name: "Студентам", link: "/students" },
   { name: "Галерея", link: "/gallery" },

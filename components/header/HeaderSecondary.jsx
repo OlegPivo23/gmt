@@ -3,32 +3,6 @@ import style from "./header.module.scss";
 import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-// const headerLinks = [
-//   { name: "Абитуриентам", link: "/applicants" },
-//   { name: "Руководство техникума", link: "/guide" },
-//   { name: "О техникуме", link: "/about" },
-//   { name: "Студентам", link: "/students" },
-//   // { name: "Методическая работа", link: "/methodical" },
-//   { name: "Галерея", link: "/gallery" }, // Исправлено /galary → /gallery
-//   { name: "Документы", link: "/documents" },
-//   { name: "Материально-техническое обеспечение", link: "/logistical-support" },
-//   {
-//     name: "Финансово-хозяйственная деятельность",
-//     link: "/financial-economic-activities",
-//   },
-// ];
-
-// const pageDescriptions = {
-//   "/applicants": "Абитуриентам - бакалавриата",
-//   "/about": "О техникуме - информация о нашем учебном заведении",
-//   "/students": "Студентам - полезная информация для студентов",
-//   "/methodical": "Методическая работа - материалы для преподавателей",
-//   "/guide": "Педагогический состав",
-//   "/gallery": "Галерея - фотографии и события техникума", // Исправлено /galary → /gallery
-//   "/documents": "Студентам",
-//   "/logistical-support": "О техникуме",
-//   "/financial-economic-activities": "О техникуме",
-// };
 
 export default function HeaderSecondary() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

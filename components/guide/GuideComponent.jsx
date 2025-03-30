@@ -102,6 +102,7 @@ export default function GuideComponent() {
             maxHeight="322px"
             width="100%"
             height="100%"
+            borderRadius="30px"
           />
         ))}
       </div>
