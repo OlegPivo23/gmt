@@ -16,6 +16,9 @@ export default function MainPage() {
       <MainLayout>
         <div className="flex flex-col gap-[40px] md:gap-[50px] lg:gap-[90px] px-4 md:px-[30px] lg:px-[90px]">
           <section>
+            <ProfessionalismBtnComponent />
+          </section>
+          <section>
             <NewsComponent />
           </section>
           <section>
@@ -23,9 +26,6 @@ export default function MainPage() {
           </section>
           <section>
             <MovieAboutComponent />
-          </section>
-          <section>
-            <ProfessionalismBtnComponent />
           </section>
         </div>
       </MainLayout>

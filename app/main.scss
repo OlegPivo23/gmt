@@ -6,6 +6,65 @@
   background-color: #fff5e9;
 }
 
-body{
+body {
   background-color: #fff5e9;
 }
+
+// /* Базовые стили */
+// .accessible * {
+//   font-size: 1em !important; /* Базовый размер шрифта */
+//   line-height: 1.5 !important; /* Увеличенная высота строк для читаемости */
+// }
+
+// /* Увеличение шрифта для текста меньше или равного 16px */
+// .accessible * {
+//   font-size: clamp(
+//     1.25rem,
+//     1em,
+//     1.5rem
+//   ) !important; /* Если меньше или равно 16px, станет 20px (1.25rem) */
+// }
+
+// /* Дополнительно для заголовков */
+// .accessible h1 {
+//   font-size: clamp(
+//     1.552rem,
+//     1.5em,
+//     2rem
+//   ) !important; /* Увеличиваем размер для h1 */
+// }
+
+// .accessible h2 {
+//   font-size: clamp(
+//     1.345rem,
+//     1.3em,
+//     1.8rem
+//   ) !important; /* Увеличиваем размер для h2 */
+// }
+
+// .accessible h3 {
+//   font-size: clamp(
+//     1.138rem,
+//     1.1em,
+//     1.5rem
+//   ) !important; /* Увеличиваем размер для h3 */
+// }
+
+// /* Для всех остальных текстов */
+// .accessible p,
+// .accessible a,
+// .accessible span,
+// .accessible button,
+// .accessible nav a,
+// .accessible label,
+// .accessible input,
+// .accessible select,
+// .accessible textarea {
+//   font-size: clamp(1.035rem, 1em, 1.5rem) !important;
+// }
+
+// /* Дополнительные стили для улучшенной читаемости */
+// .accessible {
+//   font-size: 1.035em !important;
+//   line-height: 1.5 !important;
+// }

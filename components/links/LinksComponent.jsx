@@ -43,7 +43,7 @@ export default function LinksComponent() {
         {footerLinks.map((item, i) => (
           <div
             key={i}
-            className={`font-montserrat font-medium text-2xl text-white px-[0] md:px-[50px] cursor-pointer ${
+            className={`font-montserrat font-medium text-xl text-white px-[0] md:px-[50px] cursor-pointer ${
               (i + 1) % 3 !== 0 ? "border-r border-white" : ""
             }`}
           >
