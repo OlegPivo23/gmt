@@ -10,16 +10,19 @@ body {
   background-color: #fff5e9;
 }
 
-.accessible p,
-.accessible li,
-.accessible a {
-  /* Только для текстовых элементов */
-  font-size: clamp(1rem, 2.5vw, 1.5rem);
-  line-height: 1.6;
+body.accessible {
+  background-color: #000;
 }
+// .accessible p,
+// .accessible li,
+// .accessible a {
+//   /* Только для текстовых элементов */
+//   font-size: clamp(1rem, 2.5vw, 1.5rem);
+//   line-height: 1.6;
+// }
 
-.accessible-menu {
-  gap: 2rem !important; /* Больший gap между элементами */
-  max-width: 100%;
-  padding-left: 100px !important;
-}
+// .accessible-menu {
+//   gap: 2rem !important; /* Больший gap между элементами */
+//   max-width: 100%;
+//   padding-left: 100px !important;
+// }

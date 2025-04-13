@@ -1,8 +1,8 @@
 export const slides = [
   {
-    title: "ВГМТ",
-    description: "Сохраняя традиции - создаём будущее!",
-    imageUrl: "/img/header/header-image.webp",
+    title: "",
+    description: "",
+    imageUrl: "/img/header/slogan.png",
   },
   {
     title: "Создаем будущее своими руками",

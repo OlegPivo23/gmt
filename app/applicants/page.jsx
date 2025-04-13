@@ -101,16 +101,16 @@ export default function ApplicantsPage() {
     <div className="page gap-[30px] ">
       <SecondaryLayout>
         <section>
-          <OrderComponent />
+          <RulesComponent />
+        </section>
+        <section>
+          <DocumentsListComponent />
         </section>
         <section>
           <ImportantComponent />
         </section>
         <section>
-          <RulesComponent />
-        </section>
-        <section>
-          <DocumentsListComponent />
+          <OrderComponent />
         </section>
         {/* <section>
           <DocumentForm />

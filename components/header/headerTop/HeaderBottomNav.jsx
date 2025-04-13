@@ -140,6 +140,10 @@ export default function HeaderBottomNav({ links }) {
       >
         {isAccessible ? "Обычный режим" : "Версия для слабовидящих"}
       </button>
+      <div>
+        <img src="/img/header/OrdenDN.svg 1.png" alt="" />
+      </div>
     </div>
+    
   );
 }

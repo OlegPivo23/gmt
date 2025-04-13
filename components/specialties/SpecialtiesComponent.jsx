@@ -29,26 +29,24 @@ export default function SpecialtiesComponent() {
         {/* Передаем колбек в кнопку */}
         <ShowButton onClick={handleShowAllClick}>Показать все</ShowButton>
       </div>
-      <div className="flex flex-col gap-[35px]">
-        {specialities
-          .map((item) => (
-            <div
-              key={item.id}
-              onClick={() => handleCardClick(item)}
-              className="cursor-pointer"
-            >
-              <CardComponent
-                title={item.title}
-                description={item.description}
-                bgImage={item.bgImage}
-                borderRadius="30px"
-                className="max-h-[220px]"
-                buttonText={item.buttonText}
-                hasGradient="true"
-              />
-            </div>
-          ))
-          .splice(0, 5)}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        {specialities.map((item) => (
+          <div
+            key={item.id}
+            onClick={() => handleCardClick(item)}
+            className="cursor-pointer "
+          >
+            <CardComponent
+              title={item.title}
+              description={item.description}
+              bgImage={item.bgImage}
+              borderRadius="30px"
+              className="max-h-[220px]"
+              buttonText={item.buttonText}
+              hasGradient="true"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

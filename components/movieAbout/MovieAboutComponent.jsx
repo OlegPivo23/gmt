@@ -31,7 +31,7 @@ export default function MovieAboutComponent() {
             <>
               {/* Превью из YouTube */}
               <img
-                src="/img/movie/maxresdefault.jpg"
+                src="/img/movie/default.png"
                 alt="Превью видео"
                 className="absolute inset-0 w-full h-full object-cover"
                 crossOrigin="anonymous"
